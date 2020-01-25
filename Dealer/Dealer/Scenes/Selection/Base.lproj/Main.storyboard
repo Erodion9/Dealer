@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Selection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SelectionViewController" customModule="Dealer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs4-2m-Vxo">
+                                <rect key="frame" x="132" y="44" width="150" height="122"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="t6D-BJ-hp0">
+                                <rect key="frame" x="15" y="313.5" width="384" height="269"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM4-hv-p3p" userLabel="Magic">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="Magic"/>
+                                        <connections>
+                                            <action selector="magicButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pO7-xR-H3w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNn-AY-ETt" userLabel="Yugioh">
+                                        <rect key="frame" x="0.0" y="107" width="384" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="YU-GI-OH!"/>
+                                        <connections>
+                                            <action selector="yugiohButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VcY-Kw-V55"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHN-P7-VPr" userLabel="Pokemon">
+                                        <rect key="frame" x="0.0" y="214" width="384" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="Pokémon"/>
+                                        <connections>
+                                            <action selector="pokemonButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mfe-ea-NCx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AM4-hv-p3p" firstAttribute="top" secondItem="t6D-BJ-hp0" secondAttribute="top" id="AFa-nf-pmc"/>
+                                    <constraint firstItem="eHN-P7-VPr" firstAttribute="leading" secondItem="t6D-BJ-hp0" secondAttribute="leading" id="Iva-5I-f7X"/>
+                                    <constraint firstAttribute="trailing" secondItem="AM4-hv-p3p" secondAttribute="trailing" id="J8v-E4-6PZ"/>
+                                    <constraint firstItem="sNn-AY-ETt" firstAttribute="centerX" secondItem="t6D-BJ-hp0" secondAttribute="centerX" id="dxf-lf-dak"/>
+                                    <constraint firstItem="sNn-AY-ETt" firstAttribute="centerY" secondItem="t6D-BJ-hp0" secondAttribute="centerY" id="fE4-eF-lF0"/>
+                                    <constraint firstAttribute="bottom" secondItem="eHN-P7-VPr" secondAttribute="bottom" id="ile-In-DGM"/>
+                                    <constraint firstAttribute="trailing" secondItem="eHN-P7-VPr" secondAttribute="trailing" id="q8Z-Ss-DKh"/>
+                                    <constraint firstItem="AM4-hv-p3p" firstAttribute="leading" secondItem="t6D-BJ-hp0" secondAttribute="leading" id="v6U-ZA-53a"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.42735980308219179" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t6D-BJ-hp0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="AiC-z3-E0C"/>
+                            <constraint firstItem="rs4-2m-Vxo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="Eyl-FH-bBr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t6D-BJ-hp0" secondAttribute="trailing" constant="15" id="J4x-if-DRn"/>
+                            <constraint firstItem="rs4-2m-Vxo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KQg-7A-Ybs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rs4-2m-Vxo" secondAttribute="trailing" constant="132" id="PMh-1M-IVk"/>
+                            <constraint firstItem="t6D-BJ-hp0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oYe-BK-1gh"/>
+                            <constraint firstItem="t6D-BJ-hp0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wC7-es-kyu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="magicButton" destination="AM4-hv-p3p" id="weP-hZ-TVR"/>
+                        <outlet property="pokemonButton" destination="eHN-P7-VPr" id="nNA-P5-OHb"/>
+                        <outlet property="yugiohButton" destination="sNn-AY-ETt" id="c1f-2T-4kt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
