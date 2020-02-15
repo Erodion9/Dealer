@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs4-2m-Vxo">
-                                <rect key="frame" x="132" y="44" width="150" height="122"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dealer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs4-2m-Vxo">
+                                <rect key="frame" x="15" y="44" width="384" height="122"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -63,11 +63,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.42735980308219179" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rs4-2m-Vxo" secondAttribute="trailing" constant="15" id="AUQ-QJ-hty"/>
                             <constraint firstItem="t6D-BJ-hp0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="AiC-z3-E0C"/>
-                            <constraint firstItem="rs4-2m-Vxo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="Eyl-FH-bBr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t6D-BJ-hp0" secondAttribute="trailing" constant="15" id="J4x-if-DRn"/>
-                            <constraint firstItem="rs4-2m-Vxo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KQg-7A-Ybs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rs4-2m-Vxo" secondAttribute="trailing" constant="132" id="PMh-1M-IVk"/>
+                            <constraint firstItem="rs4-2m-Vxo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dRY-ed-fSu"/>
+                            <constraint firstItem="rs4-2m-Vxo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jR4-wD-0cs"/>
                             <constraint firstItem="t6D-BJ-hp0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oYe-BK-1gh"/>
                             <constraint firstItem="t6D-BJ-hp0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wC7-es-kyu"/>
                         </constraints>

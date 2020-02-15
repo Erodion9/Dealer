@@ -15,6 +15,8 @@
 		400B4F3423DCF6BA00511C1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400B4F3223DCF6BA00511C1D /* LaunchScreen.storyboard */; };
 		400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F3F23DCF76800511C1D /* BaseViewController.swift */; };
 		400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F4323DCF7A300511C1D /* BaseViewModel.swift */; };
+		40F0D9DA23F781E300FF4641 /* SelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0D9D923F781E300FF4641 /* SelectionRouter.swift */; };
+		40F0D9DD23F7828100FF4641 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0D9DC23F7828100FF4641 /* Selection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		400B4F3523DCF6BA00511C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		400B4F3F23DCF76800511C1D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		400B4F4323DCF7A300511C1D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		40F0D9D923F781E300FF4641 /* SelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRouter.swift; sourceTree = "<group>"; };
+		40F0D9DC23F7828100FF4641 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			children = (
 				400B4F2B23DCF6B900511C1D /* SelectionViewController.swift */,
 				400B4F2D23DCF6B900511C1D /* Main.storyboard */,
+				40F0D9D923F781E300FF4641 /* SelectionRouter.swift */,
 			);
 			path = Selection;
 			sourceTree = "<group>";
@@ -91,10 +96,19 @@
 		400B4F3E23DCF75C00511C1D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				40F0D9DB23F7827600FF4641 /* Enums */,
 				400B4F3F23DCF76800511C1D /* BaseViewController.swift */,
 				400B4F4323DCF7A300511C1D /* BaseViewModel.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		40F0D9DB23F7827600FF4641 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				40F0D9DC23F7828100FF4641 /* Selection.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +182,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F0D9DD23F7828100FF4641 /* Selection.swift in Sources */,
 				400B4F2C23DCF6B900511C1D /* SelectionViewController.swift in Sources */,
+				40F0D9DA23F781E300FF4641 /* SelectionRouter.swift in Sources */,
 				400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */,
 				400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */,
 				400B4F2823DCF6B900511C1D /* AppDelegate.swift in Sources */,
