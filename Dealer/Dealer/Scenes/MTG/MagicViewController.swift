@@ -10,10 +10,7 @@ import UIKit
 
 final class MagicViewController: BaseViewController {
     
-    @IBOutlet weak var demoLabel: UILabel!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        demoLabel.text = "Magic!"
     }
 }
