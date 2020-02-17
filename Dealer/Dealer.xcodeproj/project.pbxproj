@@ -17,6 +17,8 @@
 		400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F4323DCF7A300511C1D /* BaseViewModel.swift */; };
 		40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2A23FB2CAF001C3682 /* MagicViewController.swift */; };
 		40476E2D23FB2CF6001C3682 /* Magic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40476E2C23FB2CF6001C3682 /* Magic.storyboard */; };
+		40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */; };
+		40476E3223FB2EC6001C3682 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E3123FB2EC6001C3682 /* Routable.swift */; };
 		40F0D9DA23F781E300FF4641 /* SelectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0D9D923F781E300FF4641 /* SelectionRouter.swift */; };
 		40F0D9DD23F7828100FF4641 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0D9DC23F7828100FF4641 /* Selection.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		400B4F4323DCF7A300511C1D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		40476E2A23FB2CAF001C3682 /* MagicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewController.swift; sourceTree = "<group>"; };
 		40476E2C23FB2CF6001C3682 /* Magic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magic.storyboard; sourceTree = "<group>"; };
+		40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		40476E3123FB2EC6001C3682 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		40F0D9D923F781E300FF4641 /* SelectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionRouter.swift; sourceTree = "<group>"; };
 		40F0D9DC23F7828100FF4641 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 		400B4F3E23DCF75C00511C1D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				40476E2E23FB2E8F001C3682 /* Routing */,
 				40F0D9DB23F7827600FF4641 /* Enums */,
 				400B4F3F23DCF76800511C1D /* BaseViewController.swift */,
 				400B4F4323DCF7A300511C1D /* BaseViewModel.swift */,
@@ -115,6 +120,15 @@
 				40476E2C23FB2CF6001C3682 /* Magic.storyboard */,
 			);
 			path = MTG;
+			sourceTree = "<group>";
+		};
+		40476E2E23FB2E8F001C3682 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */,
+				40476E3123FB2EC6001C3682 /* Routable.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		40F0D9DB23F7827600FF4641 /* Enums */ = {
@@ -204,7 +218,9 @@
 				40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */,
 				400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */,
 				400B4F2823DCF6B900511C1D /* AppDelegate.swift in Sources */,
+				40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */,
 				400B4F2A23DCF6B900511C1D /* SceneDelegate.swift in Sources */,
+				40476E3223FB2EC6001C3682 /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
