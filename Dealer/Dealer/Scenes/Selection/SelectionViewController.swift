@@ -27,10 +27,12 @@ private extension SelectionViewController {
         show(storyboard: .magic, style: .popover)
     }
     @IBAction func yugiohButtonTapped(_ sender: Any) {
-        show(storyboard: .yugioh, style: .fullScreen)
+        //show(storyboard: .yugioh, style: .fullScreen)
+        print("Not yet implemented.")
     }
     @IBAction func pokemonButtonTapped(_ sender: Any) {
-        show(storyboard: .pokemon, style: .fullScreen)
+        //show(storyboard: .pokemon, style: .fullScreen)
+        print("Not yet implemented.")
     }
 }
 
