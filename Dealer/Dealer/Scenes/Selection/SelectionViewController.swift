@@ -24,7 +24,7 @@ final class SelectionViewController: BaseViewController {
 private extension SelectionViewController {
 
     @IBAction func magicButtonTapped(_ sender: Any) {
-        show(storyboard: .magic, style: .popover, passedParameters: "Hello")
+        show(storyboard: .magic, style: .popover, passedParameters: nil)
     }
     @IBAction func yugiohButtonTapped(_ sender: Any) {
         //show(storyboard: .yugioh, style: .fullScreen)
@@ -39,7 +39,7 @@ private extension SelectionViewController {
 extension SelectionViewController: Routable {
     
     enum StoryboardIdentifier: String {
-        case magic = "Magic"
+        case magic = "MagicSetup"
         case yugioh = "Yugioh"
         case pokemon = "Pokemon"
     }

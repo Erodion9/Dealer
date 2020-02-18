@@ -19,6 +19,8 @@
 		40476E2D23FB2CF6001C3682 /* Magic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40476E2C23FB2CF6001C3682 /* Magic.storyboard */; };
 		40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */; };
 		40476E3223FB2EC6001C3682 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E3123FB2EC6001C3682 /* Routable.swift */; };
+		407A416923FB61BA00EAAB08 /* MagicSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */; };
+		407A416B23FB634900EAAB08 /* MagicSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */; };
 		40F0D9DD23F7828100FF4641 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0D9DC23F7828100FF4641 /* Selection.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		40476E2C23FB2CF6001C3682 /* Magic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magic.storyboard; sourceTree = "<group>"; };
 		40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		40476E3123FB2EC6001C3682 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MagicSetup.storyboard; sourceTree = "<group>"; };
+		407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSetupViewController.swift; sourceTree = "<group>"; };
 		40F0D9DC23F7828100FF4641 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,8 @@
 			children = (
 				40476E2A23FB2CAF001C3682 /* MagicViewController.swift */,
 				40476E2C23FB2CF6001C3682 /* Magic.storyboard */,
+				407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */,
+				407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */,
 			);
 			path = MTG;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40476E2D23FB2CF6001C3682 /* Magic.storyboard in Resources */,
+				407A416923FB61BA00EAAB08 /* MagicSetup.storyboard in Resources */,
 				400B4F3423DCF6BA00511C1D /* LaunchScreen.storyboard in Resources */,
 				400B4F3123DCF6BA00511C1D /* Assets.xcassets in Resources */,
 				400B4F2F23DCF6B900511C1D /* Main.storyboard in Resources */,
@@ -210,6 +217,7 @@
 			files = (
 				40F0D9DD23F7828100FF4641 /* Selection.swift in Sources */,
 				400B4F2C23DCF6B900511C1D /* SelectionViewController.swift in Sources */,
+				407A416B23FB634900EAAB08 /* MagicSetupViewController.swift in Sources */,
 				400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */,
 				40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */,
 				400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */,
