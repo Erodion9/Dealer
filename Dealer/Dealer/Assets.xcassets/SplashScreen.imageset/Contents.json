@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "DealerLoadBackground.png",
+      "filename" : "SplashScreen.png",
       "scale" : "1x"
     },
     {

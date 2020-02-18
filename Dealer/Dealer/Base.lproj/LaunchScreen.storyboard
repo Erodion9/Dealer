@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,26 +15,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DealerLoadBackground" translatesAutoresizingMaskIntoConstraints="NO" id="30E-Z1-aGF">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="kwE-Lp-LGc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="30E-Z1-aGF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bcd-5q-Jya"/>
-                            <constraint firstAttribute="bottom" secondItem="30E-Z1-aGF" secondAttribute="bottom" id="Og6-NI-wlG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="30E-Z1-aGF" secondAttribute="trailing" id="PXQ-zX-Bjg"/>
-                            <constraint firstItem="30E-Z1-aGF" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="i59-P2-X66"/>
+                            <constraint firstItem="kwE-Lp-LGc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3fh-DH-fq0"/>
+                            <constraint firstItem="kwE-Lp-LGc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7mC-3l-7xy"/>
+                            <constraint firstAttribute="bottom" secondItem="kwE-Lp-LGc" secondAttribute="bottom" id="hDv-p3-Wxi"/>
+                            <constraint firstItem="kwE-Lp-LGc" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="vxo-HH-9ec"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="373.66071428571428"/>
         </scene>
     </scenes>
     <resources>
-        <image name="DealerLoadBackground" width="4693" height="10155"/>
+        <image name="SplashScreen" width="4688" height="10150"/>
     </resources>
 </document>
