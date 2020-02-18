@@ -24,7 +24,7 @@ final class SelectionViewController: BaseViewController {
 private extension SelectionViewController {
 
     @IBAction func magicButtonTapped(_ sender: Any) {
-        show(storyboard: .magic, style: .popover)
+        show(storyboard: .magic, style: .popover, passedParameters: "Hello")
     }
     @IBAction func yugiohButtonTapped(_ sender: Any) {
         //show(storyboard: .yugioh, style: .fullScreen)
