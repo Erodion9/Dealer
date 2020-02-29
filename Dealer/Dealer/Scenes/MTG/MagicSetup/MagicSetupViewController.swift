@@ -22,11 +22,14 @@ final class MagicSetupViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+}
+
+//MARK: - Actions
+extension MagicSetupViewController {
     
     @IBAction func startButtonTapped(_ sender: Any) {
         show(storyboard: .magic, style: .overFullScreen, passedParameters: nil)
     }
-    
 }
 
 extension MagicSetupViewController: Routable {

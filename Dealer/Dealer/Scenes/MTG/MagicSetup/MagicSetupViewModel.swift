@@ -28,78 +28,99 @@ final class MagicSetupViewModel: BaseViewModel {
         case name
         case startHP
     }
-
-    var player1Settings: PlayerSettings?
-    var player2Settings: PlayerSettings?
     
-    var playerSettings: (player1: PlayerSettings, player2: PlayerSettings)? {
-        guard let player1Settings = player1Settings, let player2Settings = player2Settings else { return nil }
-        return (player1Settings, player2Settings)
-    }
+    private(set) var playerSettings = (PlayerSetting(selectedColor: (.white, .blue), name: "Player 1", startHP: 20),
+                                  PlayerSetting(selectedColor: (.black, .red), name: "Player 2", startHP: 20))
     
-    var roundNumber: RoundNumber = .one
+    private var roundNumber: RoundNumber = .one
     
-    //Data Update
-    func update(player: Bool, field: Field, data: Any) {
-        
+    func updatePlayerSettings(isPlayer1: Bool, field: Field, data: Any) {
         switch field {
         case .color:
-            guard let data = data as? (MTGColor, MTGColor) else { return }
-            updateColor(player: player, color: data)
+            if let color = data as? (primary: MTGColor, secondary: MTGColor) {
+                isPlayer1 ? (playerSettings.0.selectedColor = color) : (playerSettings.1.selectedColor = color)
+            }
         case .name:
-            guard let data = data as? String else { return }
-            updateName(player: player, name: data)
+            if let name = data as? String {
+                isPlayer1 ? (playerSettings.0.name = name) : (playerSettings.1.name = name)
+            }
         case .startHP:
-            guard let data = data as? Int else { return }
-            updateStartHP(player: player, hp: data)
-        }
-    }
-    
-    func updateColor(player: Bool, color: (MTGColor, MTGColor)) {
-        if player {
-            if var player1Settings = player1Settings {
-                player1Settings.selectedColor = color
-            } else {
-                player1Settings = PlayerSettings(selectedColor: color, name: "", startHP: Constants.defaultHP)
-            }
-        } else {
-            if var player2Settings = player2Settings {
-                player2Settings.selectedColor = color
-            } else {
-                player2Settings = PlayerSettings(selectedColor: color, name: "", startHP: Constants.defaultHP)
+            if let startHP = data as? Int {
+                isPlayer1 ? (playerSettings.0.startHP = startHP) : (playerSettings.1.startHP = startHP)
             }
         }
     }
-    
-    func updateName(player: Bool, name: String) {
-        if player {
-            if var player1Settings = player1Settings {
-                player1Settings.name = name
-            } else {
-                player1Settings = PlayerSettings(selectedColor: (.white, .white), name: name, startHP: Constants.defaultHP)
-            }
-        } else {
-            if var player2Settings = player2Settings {
-                player2Settings.name = name
-            } else {
-                player2Settings = PlayerSettings(selectedColor: (.white, .white), name: name, startHP: Constants.defaultHP)
-            }
-        }
-    }
-    
-    func updateStartHP(player: Bool, hp: Int) {
-        if player {
-            if var player1Settings = player1Settings {
-                player1Settings.startHP = hp
-            } else {
-                player1Settings = PlayerSettings(selectedColor: (.white, .white), name: "", startHP: hp)
-            }
-        } else {
-            if var player2Settings = player2Settings {
-                player2Settings.startHP = hp
-            } else {
-                player2Settings = PlayerSettings(selectedColor: (.white, .white), name: "", startHP: hp)
-            }
-        }
-    }
+
+//    private var player1Settings: PlayerSetting?
+//    private var player2Settings: PlayerSetting?
+//
+//    var playerSettings: (player1: PlayerSetting, player2: PlayerSetting)? {
+//        guard let player1Settings = player1Settings, let player2Settings = player2Settings else { return nil }
+//        return (player1Settings, player2Settings)
+//    }
+//
+//    var roundNumber: RoundNumber = .one
+//
+//    //Data Update
+//    func update(player: Bool, field: Field, data: Any) {
+//        switch field {
+//        case .color:
+//            guard let data = data as? (MTGColor, MTGColor) else { return }
+//            updateColor(player: player, color: data)
+//        case .name:
+//            guard let data = data as? String else { return }
+//            updateName(player: player, name: data)
+//        case .startHP:
+//            guard let data = data as? Int else { return }
+//            updateStartHP(player: player, hp: data)
+//        }
+//    }
+//
+//    private func updateColor(player: Bool, color: (MTGColor, MTGColor)) {
+//        if player {
+//            if var player1Settings = player1Settings {
+//                player1Settings.selectedColor = color
+//            } else {
+//                player1Settings = PlayerSetting(selectedColor: color, name: "", startHP: Constants.defaultHP)
+//            }
+//        } else {
+//            if var player2Settings = player2Settings {
+//                player2Settings.selectedColor = color
+//            } else {
+//                player2Settings = PlayerSetting(selectedColor: color, name: "", startHP: Constants.defaultHP)
+//            }
+//        }
+//    }
+//
+//    private func updateName(player: Bool, name: String) {
+//        if player {
+//            if var player1Settings = player1Settings {
+//                player1Settings.name = name
+//            } else {
+//                player1Settings = PlayerSetting(selectedColor: (.white, .white), name: name, startHP: Constants.defaultHP)
+//            }
+//        } else {
+//            if var player2Settings = player2Settings {
+//                player2Settings.name = name
+//            } else {
+//                player2Settings = PlayerSetting(selectedColor: (.white, .white), name: name, startHP: Constants.defaultHP)
+//            }
+//        }
+//    }
+//
+//    private func updateStartHP(player: Bool, hp: Int) {
+//        if player {
+//            if var player1Settings = player1Settings {
+//                player1Settings.startHP = hp
+//            } else {
+//                player1Settings = PlayerSetting(selectedColor: (.white, .white), name: "", startHP: hp)
+//            }
+//        } else {
+//            if var player2Settings = player2Settings {
+//                player2Settings.startHP = hp
+//            } else {
+//                player2Settings = PlayerSetting(selectedColor: (.white, .white), name: "", startHP: hp)
+//            }
+//        }
+//    }
 }

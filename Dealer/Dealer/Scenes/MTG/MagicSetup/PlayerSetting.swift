@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PlayerSettings {
+struct PlayerSetting {
     
     var selectedColor: (primary: MTGColor, secondary: MTGColor)
     var name: String
