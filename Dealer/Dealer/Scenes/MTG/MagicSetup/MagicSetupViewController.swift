@@ -19,16 +19,24 @@ final class MagicSetupViewController: BaseViewController {
     @IBOutlet private weak var player2NameTextField: UITextField!
     @IBOutlet private weak var player2StartHPTextField: UITextField!
     
+    private var viewModel = MagicSetupViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
 }
 
 //MARK: - Actions
 extension MagicSetupViewController {
     
     @IBAction func startButtonTapped(_ sender: Any) {
-        show(storyboard: .magic, style: .overFullScreen, passedParameters: nil)
+        show(storyboard: .magic, style: .overFullScreen, passedParameters: (viewModel.playerSettings, viewModel.roundNumber))
+    }
+    
+    @IBAction func roundsValueChanged(_ sender: Any) {
+        viewModel.roundNumber = MagicSetupViewModel.RoundNumber(rawValue: roundsSegControl.selectedSegmentIndex) ?? .one
+        print(viewModel.roundNumber)
     }
 }
 

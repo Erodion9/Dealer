@@ -28,6 +28,9 @@
                                     <segment title="3"/>
                                     <segment title="5"/>
                                 </segments>
+                                <connections>
+                                    <action selector="roundsValueChanged:" destination="Wwt-FX-8EP" eventType="valueChanged" id="iby-x9-H1Z"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgV-3h-hfb">
                                 <rect key="frame" x="166" y="140.33333333333334" width="82.333333333333314" height="30"/>
@@ -141,9 +144,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEq-hN-c5k">
-                                <rect key="frame" x="175" y="700" width="63" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEq-hN-c5k">
+                                <rect key="frame" x="175.66666666666666" y="673" width="63" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -154,11 +156,13 @@
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uN0-E4-6ji" firstAttribute="centerX" secondItem="K4J-1F-RNR" secondAttribute="centerX" id="3a0-LJ-jiu"/>
+                            <constraint firstItem="uwW-Ts-oQs" firstAttribute="bottom" secondItem="GEq-hN-c5k" secondAttribute="bottom" constant="15" id="3mu-rf-21f"/>
                             <constraint firstItem="9Yj-Fn-31s" firstAttribute="leading" secondItem="uwW-Ts-oQs" secondAttribute="leading" constant="50" id="AEh-aP-UZD"/>
                             <constraint firstItem="Br6-vz-5h3" firstAttribute="leading" secondItem="uwW-Ts-oQs" secondAttribute="leading" constant="15" id="JXi-fV-j0H"/>
                             <constraint firstItem="uwW-Ts-oQs" firstAttribute="trailing" secondItem="drT-cl-oOi" secondAttribute="trailing" constant="15" id="KtQ-YI-EP9"/>
                             <constraint firstItem="9Yj-Fn-31s" firstAttribute="top" secondItem="jgV-3h-hfb" secondAttribute="bottom" constant="15" id="Th1-cw-cFv"/>
                             <constraint firstItem="uwW-Ts-oQs" firstAttribute="trailing" secondItem="9Yj-Fn-31s" secondAttribute="trailing" constant="50" id="Wgf-09-n1i"/>
+                            <constraint firstItem="GEq-hN-c5k" firstAttribute="centerX" secondItem="K4J-1F-RNR" secondAttribute="centerX" id="XIK-Em-5gj"/>
                             <constraint firstItem="uN0-E4-6ji" firstAttribute="top" secondItem="uwW-Ts-oQs" secondAttribute="top" constant="40" id="aVa-Vs-uFz"/>
                             <constraint firstItem="9Yj-Fn-31s" firstAttribute="centerX" secondItem="K4J-1F-RNR" secondAttribute="centerX" id="am3-x9-Sbb"/>
                             <constraint firstItem="jgV-3h-hfb" firstAttribute="top" secondItem="uN0-E4-6ji" secondAttribute="bottom" constant="50" id="c62-Vn-GWR"/>
