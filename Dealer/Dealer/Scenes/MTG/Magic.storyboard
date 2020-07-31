@@ -268,8 +268,10 @@
                     </view>
                     <connections>
                         <outlet property="player1LifeTextField" destination="wuN-Kr-iks" id="vPs-wc-Wg2"/>
+                        <outlet property="player1ToolbarLifeView" destination="TJ3-Do-HTc" id="WGB-hF-HYp"/>
                         <outlet property="player1ToolbarView" destination="enl-FD-Rik" id="txU-MI-XpE"/>
                         <outlet property="player2LifeTextField" destination="KY1-p7-ijc" id="gvQ-S7-s3n"/>
+                        <outlet property="player2ToolbarLifeView" destination="yQS-aD-N4t" id="OlK-0V-dHp"/>
                         <outlet property="player2View" destination="t94-9t-PzE" id="tnB-1C-oHG"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,8 @@ final class MagicViewController: BaseViewController {
     
     @IBOutlet private weak var player2View: UIView!
     @IBOutlet private weak var player1ToolbarView: UIView!
+    @IBOutlet private weak var player2ToolbarLifeView: UILabel!
+    @IBOutlet private weak var player1ToolbarLifeView: UILabel!
     @IBOutlet private weak var player1LifeTextField: UITextField!
     @IBOutlet private weak var player2LifeTextField: UITextField!
     
@@ -45,7 +47,9 @@ extension MagicViewController {
     
     private func reloadLifeData() {
         player1LifeTextField.text = String(viewModel.getMatchData().lifePoints.player1)
+        player1ToolbarLifeView.text = String(viewModel.getMatchData().lifePoints.player1)
         player2LifeTextField.text = String(viewModel.getMatchData().lifePoints.player2)
+        player2ToolbarLifeView.text = String(viewModel.getMatchData().lifePoints.player2)
     }
 }
 
