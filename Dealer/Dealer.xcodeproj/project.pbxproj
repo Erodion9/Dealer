@@ -15,6 +15,8 @@
 		400B4F3423DCF6BA00511C1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400B4F3223DCF6BA00511C1D /* LaunchScreen.storyboard */; };
 		400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F3F23DCF76800511C1D /* BaseViewController.swift */; };
 		400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F4323DCF7A300511C1D /* BaseViewModel.swift */; };
+		4013CF5724D4AB6700BCEDC3 /* MagicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013CF5624D4AB6700BCEDC3 /* MagicViewModel.swift */; };
+		4013CF5A24D4BC5300BCEDC3 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013CF5924D4BC5300BCEDC3 /* MatchData.swift */; };
 		40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2A23FB2CAF001C3682 /* MagicViewController.swift */; };
 		40476E2D23FB2CF6001C3682 /* Magic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40476E2C23FB2CF6001C3682 /* Magic.storyboard */; };
 		40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */; };
@@ -38,6 +40,8 @@
 		400B4F3523DCF6BA00511C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		400B4F3F23DCF76800511C1D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		400B4F4323DCF7A300511C1D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		4013CF5624D4AB6700BCEDC3 /* MagicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewModel.swift; sourceTree = "<group>"; };
+		4013CF5924D4BC5300BCEDC3 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
 		40476E2A23FB2CAF001C3682 /* MagicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewController.swift; sourceTree = "<group>"; };
 		40476E2C23FB2CF6001C3682 /* Magic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magic.storyboard; sourceTree = "<group>"; };
 		40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		400B4F2623DCF6B900511C1D /* Dealer */ = {
 			isa = PBXGroup;
 			children = (
+				4013CF5824D4BC4000BCEDC3 /* Model */,
 				400B4F3E23DCF75C00511C1D /* Base */,
 				400B4F3C23DCF72800511C1D /* Scenes */,
 				400B4F2723DCF6B900511C1D /* AppDelegate.swift */,
@@ -120,12 +125,21 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		4013CF5824D4BC4000BCEDC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4013CF5924D4BC5300BCEDC3 /* MatchData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		40476E2923FB2C9C001C3682 /* MTG */ = {
 			isa = PBXGroup;
 			children = (
 				40780CE22403ADC200D4B269 /* MagicSetup */,
 				40476E2A23FB2CAF001C3682 /* MagicViewController.swift */,
 				40476E2C23FB2CF6001C3682 /* Magic.storyboard */,
+				4013CF5624D4AB6700BCEDC3 /* MagicViewModel.swift */,
 			);
 			path = MTG;
 			sourceTree = "<group>";
@@ -238,8 +252,10 @@
 				400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */,
 				40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */,
 				40780CE62403ADFC00D4B269 /* PlayerSetting.swift in Sources */,
+				4013CF5724D4AB6700BCEDC3 /* MagicViewModel.swift in Sources */,
 				400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */,
 				400B4F2823DCF6B900511C1D /* AppDelegate.swift in Sources */,
+				4013CF5A24D4BC5300BCEDC3 /* MatchData.swift in Sources */,
 				40780CE42403ADD600D4B269 /* MagicSetupViewModel.swift in Sources */,
 				40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */,
 				400B4F2A23DCF6B900511C1D /* SceneDelegate.swift in Sources */,

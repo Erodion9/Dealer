@@ -31,25 +31,31 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Eit-gP-fYn">
                                                 <rect key="frame" x="20" y="283" width="326" height="69"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVk-NN-egA" userLabel="Minus">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVk-NN-egA" userLabel="Minus">
                                                         <rect key="frame" x="0.0" y="0.0" width="90.5" height="69"/>
                                                         <color key="tintColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" image="minus.rectangle.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="decrementButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="ZuT-Wd-YZb"/>
+                                                        </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KY1-p7-ijc" userLabel="Life">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KY1-p7-ijc" userLabel="Life">
                                                         <rect key="frame" x="125.5" y="0.0" width="75" height="69"/>
                                                         <color key="textColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="57"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hor-nN-aXH" userLabel="Plus">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hor-nN-aXH" userLabel="Plus">
                                                         <rect key="frame" x="235.5" y="0.0" width="90.5" height="69"/>
                                                         <color key="tintColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" image="plus.rectangle.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="incrementButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="wJ5-cc-4oR"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -96,8 +102,11 @@
                                                         <state key="normal" image="minus.rectangle.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="decrementButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="G3A-Mc-vKV"/>
+                                                        </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wuN-Kr-iks" userLabel="Life">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wuN-Kr-iks" userLabel="Life">
                                                         <rect key="frame" x="125.5" y="0.0" width="75" height="69"/>
                                                         <color key="textColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="57"/>
@@ -109,6 +118,9 @@
                                                         <state key="normal" image="plus.rectangle.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="incrementButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="K9A-aF-G5I"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -148,7 +160,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="LMv-x6-XS9"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-Do-HTc">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-Do-HTc">
                                                         <rect key="frame" x="100" y="8" width="30" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="MxU-K4-ugA"/>
@@ -204,7 +216,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="an0-NO-e7d"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQS-aD-N4t">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQS-aD-N4t">
                                                         <rect key="frame" x="8" y="8" width="30" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="Ybn-4u-hD7"/>
@@ -255,7 +267,9 @@
                         <viewLayoutGuide key="safeArea" id="a1g-La-OGB"/>
                     </view>
                     <connections>
+                        <outlet property="player1LifeTextField" destination="wuN-Kr-iks" id="vPs-wc-Wg2"/>
                         <outlet property="player1ToolbarView" destination="enl-FD-Rik" id="txU-MI-XpE"/>
+                        <outlet property="player2LifeTextField" destination="KY1-p7-ijc" id="gvQ-S7-s3n"/>
                         <outlet property="player2View" destination="t94-9t-PzE" id="tnB-1C-oHG"/>
                     </connections>
                 </viewController>
