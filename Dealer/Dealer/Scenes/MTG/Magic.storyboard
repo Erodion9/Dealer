@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="008-1j-ed0">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,27 +12,30 @@
             <objects>
                 <viewController storyboardIdentifier="Magic" useStoryboardIdentifierAsRestorationIdentifier="YES" id="008-1j-ed0" userLabel="Magic" customClass="MagicViewController" customModule="Dealer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aig-2E-69Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azx-r4-lPd" userLabel="Player2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="384"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t94-9t-PzE">
-                                        <rect key="frame" x="24" y="12" width="366" height="360"/>
+                                        <rect key="frame" x="24" y="12" width="272" height="240"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rId-B8-CWW" userLabel="PlayerImage">
-                                                <rect key="frame" x="111" y="109.5" width="144.5" height="141.5"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rId-B8-CWW" userLabel="PlayerImage">
+                                                <rect key="frame" x="64" y="49.5" width="144.5" height="141.5"/>
                                                 <color key="tintColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" image="person.circle.fill" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100" scale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pictureButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="Lkm-Pg-rs0"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Eit-gP-fYn">
-                                                <rect key="frame" x="20" y="283" width="326" height="69"/>
+                                                <rect key="frame" x="20" y="162" width="232" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVk-NN-egA" userLabel="Minus">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="69"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="70"/>
                                                         <color key="tintColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" image="minus.rectangle.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
@@ -41,14 +44,14 @@
                                                             <action selector="decrementButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="ZuT-Wd-YZb"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KY1-p7-ijc" userLabel="Life">
-                                                        <rect key="frame" x="125.5" y="0.0" width="75" height="69"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KY1-p7-ijc" userLabel="Seperator">
+                                                        <rect key="frame" x="110" y="0.0" width="12" height="70"/>
                                                         <color key="textColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="57"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hor-nN-aXH" userLabel="Plus">
-                                                        <rect key="frame" x="235.5" y="0.0" width="90.5" height="69"/>
+                                                        <rect key="frame" x="157" y="0.0" width="75" height="70"/>
                                                         <color key="tintColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" image="plus.rectangle.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
@@ -62,11 +65,19 @@
                                                     <constraint firstItem="KY1-p7-ijc" firstAttribute="centerX" secondItem="Eit-gP-fYn" secondAttribute="centerX" id="pE4-qM-PDS"/>
                                                 </constraints>
                                             </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sWW-QW-4bA" userLabel="Life">
+                                                <rect key="frame" x="98.5" y="8" width="75" height="69"/>
+                                                <color key="textColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="57"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="Eit-gP-fYn" firstAttribute="leading" secondItem="t94-9t-PzE" secondAttribute="leading" constant="20" id="D0w-sb-vCO"/>
                                             <constraint firstAttribute="bottom" secondItem="Eit-gP-fYn" secondAttribute="bottom" constant="8" id="Vfi-Pw-LJa"/>
+                                            <constraint firstItem="sWW-QW-4bA" firstAttribute="centerX" secondItem="t94-9t-PzE" secondAttribute="centerX" id="Xf3-dc-amV"/>
                                             <constraint firstItem="rId-B8-CWW" firstAttribute="centerX" secondItem="t94-9t-PzE" secondAttribute="centerX" id="fkq-RO-mob"/>
+                                            <constraint firstItem="sWW-QW-4bA" firstAttribute="top" secondItem="t94-9t-PzE" secondAttribute="top" constant="8" id="orp-Pm-hH7"/>
                                             <constraint firstItem="rId-B8-CWW" firstAttribute="centerY" secondItem="t94-9t-PzE" secondAttribute="centerY" id="q7M-xO-gkW"/>
                                             <constraint firstAttribute="trailing" secondItem="Eit-gP-fYn" secondAttribute="trailing" constant="20" id="xKb-eb-tVw"/>
                                         </constraints>
@@ -81,23 +92,26 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aUV-F7-fV4" userLabel="Player1">
-                                <rect key="frame" x="0.0" y="468" width="414" height="394"/>
+                                <rect key="frame" x="0.0" y="304" width="320" height="264"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Qt-Lpc">
-                                        <rect key="frame" x="24" y="12" width="366" height="370"/>
+                                        <rect key="frame" x="24" y="12" width="272" height="240"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DJV-fn-4Cw" userLabel="PlayerImage">
-                                                <rect key="frame" x="111" y="114.5" width="144.5" height="141.5"/>
+                                                <rect key="frame" x="64" y="49.5" width="144.5" height="141.5"/>
                                                 <color key="tintColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" image="person.circle.fill" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100" scale="large"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="pictureButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="4AO-Zf-BVa"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="7fp-tq-NCl">
-                                                <rect key="frame" x="20" y="293" width="326" height="69"/>
+                                                <rect key="frame" x="20" y="162" width="232" height="70"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5i-fq-cIt" userLabel="Minus">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90.5" height="69"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="75" height="70"/>
                                                         <color key="tintColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" image="minus.rectangle.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
@@ -106,14 +120,14 @@
                                                             <action selector="decrementButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="G3A-Mc-vKV"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wuN-Kr-iks" userLabel="Life">
-                                                        <rect key="frame" x="125.5" y="0.0" width="75" height="69"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wuN-Kr-iks" userLabel="Seperator">
+                                                        <rect key="frame" x="110" y="0.0" width="12" height="70"/>
                                                         <color key="textColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="57"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxa-zH-ym2" userLabel="Plus">
-                                                        <rect key="frame" x="235.5" y="0.0" width="90.5" height="69"/>
+                                                        <rect key="frame" x="157" y="0.0" width="75" height="70"/>
                                                         <color key="tintColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" image="plus.rectangle.fill" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
@@ -127,12 +141,20 @@
                                                     <constraint firstItem="wuN-Kr-iks" firstAttribute="centerX" secondItem="7fp-tq-NCl" secondAttribute="centerX" id="54T-Fe-dKh"/>
                                                 </constraints>
                                             </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JRm-U0-ljM" userLabel="Life">
+                                                <rect key="frame" x="98.5" y="8" width="75" height="69"/>
+                                                <color key="textColor" red="1" green="0.42166701610000001" blue="0.2892807168" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="57"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="DJV-fn-4Cw" firstAttribute="centerX" secondItem="kIx-Qt-Lpc" secondAttribute="centerX" id="L5q-ed-aha"/>
                                             <constraint firstItem="DJV-fn-4Cw" firstAttribute="centerY" secondItem="kIx-Qt-Lpc" secondAttribute="centerY" id="M98-5l-ukW"/>
+                                            <constraint firstItem="JRm-U0-ljM" firstAttribute="centerX" secondItem="kIx-Qt-Lpc" secondAttribute="centerX" id="PjP-VT-Bli"/>
                                             <constraint firstItem="7fp-tq-NCl" firstAttribute="leading" secondItem="kIx-Qt-Lpc" secondAttribute="leading" constant="20" id="Uec-U9-GHb"/>
                                             <constraint firstAttribute="bottom" secondItem="7fp-tq-NCl" secondAttribute="bottom" constant="8" id="XVh-ng-CJl"/>
+                                            <constraint firstItem="JRm-U0-ljM" firstAttribute="top" secondItem="kIx-Qt-Lpc" secondAttribute="top" constant="8" id="qkg-2q-yBV"/>
                                             <constraint firstAttribute="trailing" secondItem="7fp-tq-NCl" secondAttribute="trailing" constant="20" id="woq-V8-t9t"/>
                                         </constraints>
                                     </view>
@@ -146,13 +168,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRH-L5-42l" userLabel="Toolbar">
-                                <rect key="frame" x="0.0" y="428" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="264" width="320" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="lAS-Jp-srX">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enl-FD-Rik" userLabel="Player1HPView">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ihf-Bg-HPz">
                                                         <rect key="frame" x="8" y="8.5" width="30" height="23"/>
@@ -161,7 +183,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-Do-HTc">
-                                                        <rect key="frame" x="100" y="8" width="30" height="24"/>
+                                                        <rect key="frame" x="68.5" y="8" width="30" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="MxU-K4-ugA"/>
                                                         </constraints>
@@ -181,7 +203,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mq1-Ps-Gj6" userLabel="FortuneView">
-                                                <rect key="frame" x="138" y="0.0" width="138" height="40"/>
+                                                <rect key="frame" x="106.5" y="0.0" width="107" height="40"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xef-gg-YwE" userLabel="DiceButton">
                                                         <rect key="frame" x="8" y="2" width="35" height="36"/>
@@ -191,7 +213,7 @@
                                                         <state key="normal" image="placeholder_dice"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ce-zx-C4j" userLabel="CoinTossbutton">
-                                                        <rect key="frame" x="94" y="2" width="36" height="36"/>
+                                                        <rect key="frame" x="63" y="2" width="36" height="36"/>
                                                         <state key="normal" image="bitcoinsign.circle" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31"/>
                                                         </state>
@@ -208,10 +230,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNr-Bd-GkP" userLabel="Player2View">
-                                                <rect key="frame" x="276" y="0.0" width="138" height="40"/>
+                                                <rect key="frame" x="213.5" y="0.0" width="106.5" height="40"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Ss-OG-UFM">
-                                                        <rect key="frame" x="100" y="8.5" width="30" height="23"/>
+                                                        <rect key="frame" x="68.5" y="8.5" width="30" height="23"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="an0-NO-e7d"/>
                                                         </constraints>
@@ -267,11 +289,13 @@
                         <viewLayoutGuide key="safeArea" id="a1g-La-OGB"/>
                     </view>
                     <connections>
-                        <outlet property="player1LifeTextField" destination="wuN-Kr-iks" id="vPs-wc-Wg2"/>
+                        <outlet property="player1LifeTextField" destination="JRm-U0-ljM" id="o4T-FO-nWs"/>
+                        <outlet property="player1PictureButton" destination="DJV-fn-4Cw" id="nLw-fV-3iq"/>
                         <outlet property="player1ToolbarLifeView" destination="TJ3-Do-HTc" id="WGB-hF-HYp"/>
-                        <outlet property="player1ToolbarView" destination="enl-FD-Rik" id="txU-MI-XpE"/>
-                        <outlet property="player2LifeTextField" destination="KY1-p7-ijc" id="gvQ-S7-s3n"/>
+                        <outlet property="player2LifeTextField" destination="sWW-QW-4bA" id="9Mz-Eh-7GQ"/>
+                        <outlet property="player2PictureButton" destination="rId-B8-CWW" id="ATz-ZW-g8J"/>
                         <outlet property="player2ToolbarLifeView" destination="yQS-aD-N4t" id="OlK-0V-dHp"/>
+                        <outlet property="player2ToolbarView" destination="GNr-Bd-GkP" id="u1d-9E-c4b"/>
                         <outlet property="player2View" destination="t94-9t-PzE" id="tnB-1C-oHG"/>
                     </connections>
                 </viewController>

@@ -7,16 +7,21 @@
 //
 import UIKit
 
-final class MagicViewController: BaseViewController {
+final class MagicViewController: BaseViewController, UINavigationControllerDelegate {
     
     @IBOutlet private weak var player2View: UIView!
-    @IBOutlet private weak var player1ToolbarView: UIView!
+    @IBOutlet private weak var player2ToolbarView: UIView!
     @IBOutlet private weak var player2ToolbarLifeView: UILabel!
     @IBOutlet private weak var player1ToolbarLifeView: UILabel!
     @IBOutlet private weak var player1LifeTextField: UITextField!
     @IBOutlet private weak var player2LifeTextField: UITextField!
+    @IBOutlet private weak var player1PictureButton: UIButton!
+    @IBOutlet private weak var player2PictureButton: UIButton!
+    
+    private var imagePicker = UIImagePickerController()
     
     private var viewModel = MagicViewModel()
+    private var player1PicturePressed = true
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,20 +29,33 @@ final class MagicViewController: BaseViewController {
         self?.apply(change: change)
         }
         configureView()
+        reloadLifeData()
     }
 
+    @IBAction func pictureButtonTapped(_ sender: UIButton) {
+        
+        ImagePickerManager().pickImage(self) { (image) in
+            let resizedImage = self.resizeImage(image: image, targetSize: sender.frame.size)
+            sender.setImage(resizedImage, for: .normal)
+        }
+    }
 }
 
 //MARK: - View Configuration
 extension MagicViewController {
     
     private func configureView() {
-        flipPlayer2Elements()
+        flipElements()
     }
     
-    private func flipPlayer2Elements() {
+    private func flipElements() {
         player2View.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-        player1ToolbarView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        player2ToolbarView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        player1PictureButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        player2PictureButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        
+        player1LifeTextField.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+                player2LifeTextField.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
     }
     
     private func disableLifeTextFields() {
