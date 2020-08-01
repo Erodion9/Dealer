@@ -14,14 +14,29 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupKeyboard()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+
+}
+
+//MARK: - Keyboard
+extension BaseViewController {
+    
+    private func setupKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
-
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+                self.view.frame.origin.y -= ((keyboardSize.height * 2) / 3)
             }
         }
     }
@@ -31,6 +46,10 @@ class BaseViewController: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
+}
+
+//MARK: - Utilities
+extension BaseViewController {
     
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
         let size = image.size
