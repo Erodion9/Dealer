@@ -17,6 +17,7 @@
 		400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F4323DCF7A300511C1D /* BaseViewModel.swift */; };
 		4013CF5724D4AB6700BCEDC3 /* MagicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013CF5624D4AB6700BCEDC3 /* MagicViewModel.swift */; };
 		4013CF5A24D4BC5300BCEDC3 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013CF5924D4BC5300BCEDC3 /* MatchData.swift */; };
+		40333AB424D59D9500B8D38D /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40333AB324D59D9500B8D38D /* ImagePickerManager.swift */; };
 		40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2A23FB2CAF001C3682 /* MagicViewController.swift */; };
 		40476E2D23FB2CF6001C3682 /* Magic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40476E2C23FB2CF6001C3682 /* Magic.storyboard */; };
 		40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */; };
@@ -42,6 +43,7 @@
 		400B4F4323DCF7A300511C1D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		4013CF5624D4AB6700BCEDC3 /* MagicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewModel.swift; sourceTree = "<group>"; };
 		4013CF5924D4BC5300BCEDC3 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
+		40333AB324D59D9500B8D38D /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		40476E2A23FB2CAF001C3682 /* MagicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewController.swift; sourceTree = "<group>"; };
 		40476E2C23FB2CF6001C3682 /* Magic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magic.storyboard; sourceTree = "<group>"; };
 		40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				40F0D9DB23F7827600FF4641 /* Enums */,
 				400B4F3F23DCF76800511C1D /* BaseViewController.swift */,
 				400B4F4323DCF7A300511C1D /* BaseViewModel.swift */,
+				40333AB324D59D9500B8D38D /* ImagePickerManager.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				400B4F2A23DCF6B900511C1D /* SceneDelegate.swift in Sources */,
 				40476E3223FB2EC6001C3682 /* Routable.swift in Sources */,
 				40780CE82403B09E00D4B269 /* MTGColor.swift in Sources */,
+				40333AB424D59D9500B8D38D /* ImagePickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
