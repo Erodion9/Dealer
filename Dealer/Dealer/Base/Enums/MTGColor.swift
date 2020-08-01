@@ -6,7 +6,7 @@
 //  Copyright © 2020 Deniz Mavi. All rights reserved.
 //
 
-enum MTGColor {
+enum MTGColor: CaseIterable {
     
     case blue
     case red

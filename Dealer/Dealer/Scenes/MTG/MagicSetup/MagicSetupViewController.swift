@@ -18,13 +18,35 @@ final class MagicSetupViewController: BaseViewController {
     @IBOutlet private weak var player2ColorTextField: UITextField!
     @IBOutlet private weak var player2NameTextField: UITextField!
     @IBOutlet private weak var player2StartHPTextField: UITextField!
-    
+    @IBOutlet private weak var colorPickerView: UIPickerView!
     private var viewModel = MagicSetupViewModel()
+    
+    var colorPickerData = [[MTGColor]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureView()
+    }
+}
+
+//MARK: - View Configuration
+extension MagicSetupViewController {
+    
+    private func configureView() {
+        fillMTGColors()
+        connectPickerView()
+        colorPickerView.isHidden = false
     }
 
+    private func fillMTGColors() {
+        for i in 0..<MTGColor.allCases.count {
+            colorPickerData.append([MTGColor]())
+            for color in MTGColor.allCases {
+                colorPickerData[i].append(color)
+            }
+        }
+    }
 }
 
 //MARK: - Actions
@@ -37,6 +59,28 @@ extension MagicSetupViewController {
     @IBAction func roundsValueChanged(_ sender: Any) {
         viewModel.roundNumber = MagicSetupViewModel.RoundNumber(rawValue: roundsSegControl.selectedSegmentIndex) ?? .one
         print(viewModel.roundNumber)
+    }
+}
+
+//MARK: - UIPickerViewDelegate
+extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    private func connectPickerView() {
+        self.colorPickerView.delegate = self
+        self.colorPickerView.dataSource = self
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return colorPickerData.count
+    }
+       
+       // The data to return fopr the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return String(describing: colorPickerData[component][row])
     }
 }
 
