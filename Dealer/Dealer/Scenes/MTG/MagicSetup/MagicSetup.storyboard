@@ -152,14 +152,9 @@
                                     <action selector="startButtonTapped:" destination="Wwt-FX-8EP" eventType="touchUpInside" id="RUn-ji-epX"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRW-mC-Vs8">
-                                <rect key="frame" x="0.0" y="575" width="414" height="216"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TRW-mC-Vs8" firstAttribute="leading" secondItem="uwW-Ts-oQs" secondAttribute="leading" id="0yi-ms-Hiy"/>
-                            <constraint firstItem="TRW-mC-Vs8" firstAttribute="trailing" secondItem="uwW-Ts-oQs" secondAttribute="trailing" id="2Zv-hZ-yTe"/>
                             <constraint firstItem="uN0-E4-6ji" firstAttribute="centerX" secondItem="K4J-1F-RNR" secondAttribute="centerX" id="3a0-LJ-jiu"/>
                             <constraint firstItem="uwW-Ts-oQs" firstAttribute="bottom" secondItem="GEq-hN-c5k" secondAttribute="bottom" constant="15" id="3mu-rf-21f"/>
                             <constraint firstItem="9Yj-Fn-31s" firstAttribute="leading" secondItem="uwW-Ts-oQs" secondAttribute="leading" constant="50" id="AEh-aP-UZD"/>
@@ -172,14 +167,12 @@
                             <constraint firstItem="Br6-vz-5h3" firstAttribute="top" secondItem="9Yj-Fn-31s" secondAttribute="bottom" constant="25" id="deC-z1-BMa"/>
                             <constraint firstItem="Br6-vz-5h3" firstAttribute="leading" secondItem="uwW-Ts-oQs" secondAttribute="leading" constant="15" id="k3b-qW-KUr"/>
                             <constraint firstItem="drT-cl-oOi" firstAttribute="top" secondItem="9Yj-Fn-31s" secondAttribute="bottom" constant="25" id="kaB-0z-wk9"/>
-                            <constraint firstItem="GEq-hN-c5k" firstAttribute="top" secondItem="TRW-mC-Vs8" secondAttribute="bottom" constant="8" id="n9a-RT-8SX"/>
                             <constraint firstItem="uwW-Ts-oQs" firstAttribute="trailing" secondItem="drT-cl-oOi" secondAttribute="trailing" constant="15" id="sTP-xx-RrZ"/>
                             <constraint firstItem="jgV-3h-hfb" firstAttribute="centerX" secondItem="K4J-1F-RNR" secondAttribute="centerX" id="xxX-0F-r6s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uwW-Ts-oQs"/>
                     </view>
                     <connections>
-                        <outlet property="colorPickerView" destination="TRW-mC-Vs8" id="bfy-oE-oJu"/>
                         <outlet property="player1ColorTextField" destination="LmQ-dm-kwO" id="PFH-K7-fHo"/>
                         <outlet property="player1NameTextField" destination="oAD-YG-jOZ" id="oxD-m5-wZs"/>
                         <outlet property="player1StartHPTextField" destination="XZ0-4O-eeF" id="6sM-Wv-A58"/>
