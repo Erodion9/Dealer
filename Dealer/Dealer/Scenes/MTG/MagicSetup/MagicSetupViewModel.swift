@@ -50,4 +50,12 @@ final class MagicSetupViewModel: BaseViewModel {
             }
         }
     }
+    
+    func setPlayerColor(isPlayer1: Bool, colors: (primary: MTGColor, secondary: MTGColor)) {
+        isPlayer1 ? (playerSettings.0.selectedColor = colors) : (playerSettings.1.selectedColor = colors)
+    }
+    
+    func getPlayerSettings(forPlayer1: Bool) -> PlayerSetting {
+        return forPlayer1 ? playerSettings.0 : playerSettings.1
+    }
 }

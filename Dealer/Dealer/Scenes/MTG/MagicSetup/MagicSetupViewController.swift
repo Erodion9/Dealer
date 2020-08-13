@@ -22,8 +22,6 @@ final class MagicSetupViewController: BaseViewController {
     
     private var player1ColorPickerView: UIPickerView?
     private var player2ColorPickerView: UIPickerView?
-    private var player1SelectedColor: (color1: MTGColor, color2: MTGColor) = (color1: .red, color2: .green)
-    private var player2SelectedColor: (color1: MTGColor, color2: MTGColor) = (color1: .black, color2: .blue)
     
     var colorPickerData = [[MTGColor]]()
     
@@ -66,8 +64,8 @@ extension MagicSetupViewController {
     }
     
     private func updateColorTextBoxes() {
-        player1ColorTextField.text = player1SelectedColor.color1.getEmoji() + player1SelectedColor.color2.getEmoji()
-        player2ColorTextField.text = player2SelectedColor.color1.getEmoji() + player2SelectedColor.color2.getEmoji()
+        player1ColorTextField.text = viewModel.playerSettings.0.selectedColor.primary.getEmoji() + viewModel.playerSettings.0.selectedColor.secondary.getEmoji()
+        player2ColorTextField.text = viewModel.playerSettings.1.selectedColor.primary.getEmoji() + viewModel.playerSettings.1.selectedColor.secondary.getEmoji()
     }
 }
 
@@ -102,18 +100,13 @@ extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        if pickerView == player1ColorPickerView {
-            if component == 0 {
-                player1SelectedColor.color1 = colorPickerData[0][row]
-            } else if component == 1 {
-                player1SelectedColor.color2 = colorPickerData[1][row]
-            }
-        } else if pickerView == player2ColorPickerView {
-            if component == 0 {
-                player2SelectedColor.color1 = colorPickerData[0][row]
-            } else if component == 1 {
-                player2SelectedColor.color2 = colorPickerData[1][row]
-            }
+        if component == 0 {
+            viewModel.setPlayerColor(isPlayer1: pickerView == player1ColorPickerView,
+                                     colors: (primary: colorPickerData[0][row],
+                                              secondary: viewModel.getPlayerSettings(forPlayer1: pickerView == player1ColorPickerView).selectedColor.secondary))
+        } else if component == 1 {
+            viewModel.setPlayerColor(isPlayer1: pickerView == player1ColorPickerView,
+                                     colors: (primary: viewModel.getPlayerSettings(forPlayer1: pickerView == player1ColorPickerView).selectedColor.primary, secondary: colorPickerData[1][row]))
         }
         updateColorTextBoxes()
          // use the row to get the selected row from the picker view
