@@ -13,4 +13,19 @@ enum MTGColor: CaseIterable {
     case white
     case green
     case black
+    
+    func getEmoji() -> String {
+        switch self {
+        case .blue:
+            return "🟦"
+        case .red:
+            return "🟥"
+        case .white:
+            return "⬜️"
+        case .green:
+            return "🟩"
+        case .black:
+            return "⬛️"
+        }
+    }
 }
