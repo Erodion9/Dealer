@@ -23,7 +23,7 @@ final class MagicSetupViewController: BaseViewController {
     private var player1ColorPickerView: UIPickerView?
     private var player2ColorPickerView: UIPickerView?
     
-    var colorPickerData = [[MTGColor]]()
+    var colorPickerData = [[MatchData.MTGColor]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +55,9 @@ extension MagicSetupViewController {
     }
 
     private func fillMTGColors() {
-        for i in 0..<MTGColor.allCases.count {
-            colorPickerData.append([MTGColor]())
-            for color in MTGColor.allCases {
+        for i in 0..<MatchData.MTGColor.allCases.count {
+            colorPickerData.append([MatchData.MTGColor]())
+            for color in MatchData.MTGColor.allCases {
                 colorPickerData[i].append(color)
             }
         }

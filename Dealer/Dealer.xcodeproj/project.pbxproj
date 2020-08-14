@@ -23,8 +23,6 @@
 		40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */; };
 		40476E3223FB2EC6001C3682 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E3123FB2EC6001C3682 /* Routable.swift */; };
 		40780CE42403ADD600D4B269 /* MagicSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40780CE32403ADD600D4B269 /* MagicSetupViewModel.swift */; };
-		40780CE62403ADFC00D4B269 /* PlayerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40780CE52403ADFC00D4B269 /* PlayerSetting.swift */; };
-		40780CE82403B09E00D4B269 /* MTGColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40780CE72403B09E00D4B269 /* MTGColor.swift */; };
 		407A416923FB61BA00EAAB08 /* MagicSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */; };
 		407A416B23FB634900EAAB08 /* MagicSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */; };
 		40F0D9DD23F7828100FF4641 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0D9DC23F7828100FF4641 /* Selection.swift */; };
@@ -49,8 +47,6 @@
 		40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		40476E3123FB2EC6001C3682 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		40780CE32403ADD600D4B269 /* MagicSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSetupViewModel.swift; sourceTree = "<group>"; };
-		40780CE52403ADFC00D4B269 /* PlayerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSetting.swift; sourceTree = "<group>"; };
-		40780CE72403B09E00D4B269 /* MTGColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTGColor.swift; sourceTree = "<group>"; };
 		407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MagicSetup.storyboard; sourceTree = "<group>"; };
 		407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSetupViewController.swift; sourceTree = "<group>"; };
 		40F0D9DC23F7828100FF4641 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
@@ -162,7 +158,6 @@
 				407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */,
 				407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */,
 				40780CE32403ADD600D4B269 /* MagicSetupViewModel.swift */,
-				40780CE52403ADFC00D4B269 /* PlayerSetting.swift */,
 			);
 			path = MagicSetup;
 			sourceTree = "<group>";
@@ -171,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				40F0D9DC23F7828100FF4641 /* Selection.swift */,
-				40780CE72403B09E00D4B269 /* MTGColor.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -254,7 +248,6 @@
 				407A416B23FB634900EAAB08 /* MagicSetupViewController.swift in Sources */,
 				400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */,
 				40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */,
-				40780CE62403ADFC00D4B269 /* PlayerSetting.swift in Sources */,
 				4013CF5724D4AB6700BCEDC3 /* MagicViewModel.swift in Sources */,
 				400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */,
 				400B4F2823DCF6B900511C1D /* AppDelegate.swift in Sources */,
@@ -263,7 +256,6 @@
 				40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */,
 				400B4F2A23DCF6B900511C1D /* SceneDelegate.swift in Sources */,
 				40476E3223FB2EC6001C3682 /* Routable.swift in Sources */,
-				40780CE82403B09E00D4B269 /* MTGColor.swift in Sources */,
 				40333AB424D59D9500B8D38D /* ImagePickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

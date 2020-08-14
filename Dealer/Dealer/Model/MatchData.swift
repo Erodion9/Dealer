@@ -8,6 +8,30 @@
 
 struct MatchData {
     
+    enum MTGColor: CaseIterable {
+        
+        case blue
+        case red
+        case white
+        case green
+        case black
+        
+        func getEmoji() -> String {
+            switch self {
+            case .blue:
+                return "🟦"
+            case .red:
+                return "🟥"
+            case .white:
+                return "⬜️"
+            case .green:
+                return "🟩"
+            case .black:
+                return "⬛️"
+            }
+        }
+    }
+
     struct ColorPair {
         
         var primary: MTGColor
@@ -20,6 +44,7 @@ struct MatchData {
         case three
         case five
     }
+
     var roundNumber: RoundNumber = .one
     var colors: (player1: ColorPair, player2: ColorPair) = (player1: ColorPair(primary: .blue,
                                                                                secondary: .red),

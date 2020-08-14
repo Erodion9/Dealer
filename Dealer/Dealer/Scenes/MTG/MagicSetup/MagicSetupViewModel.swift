@@ -32,7 +32,7 @@ final class MagicSetupViewModel: BaseViewModel {
         matchData.roundNumber = rounds
     }
     
-    func setPlayerColor(forPlayer1: Bool, isPrimary: Bool, color: MTGColor) {
+    func setPlayerColor(forPlayer1: Bool, isPrimary: Bool, color: MatchData.MTGColor) {
         if forPlayer1 {
             if isPrimary {
                 matchData.colors.player1.primary = color
