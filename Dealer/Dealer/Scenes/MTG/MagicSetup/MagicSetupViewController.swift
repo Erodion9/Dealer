@@ -47,6 +47,9 @@ extension MagicSetupViewController {
         player1ColorTextField.inputView = player1ColorPickerView
         player2ColorTextField.inputView = player2ColorPickerView
         
+        player1ColorTextField.tintColor = UIColor.clear
+        player2ColorTextField.tintColor = UIColor.clear
+        
         updateColorTextBoxes()
     }
     
