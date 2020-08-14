@@ -64,8 +64,9 @@ extension MagicSetupViewController {
     }
     
     private func updateColorTextBoxes() {
-        player1ColorTextField.text = viewModel.playerSettings.0.selectedColor.primary.getEmoji() + viewModel.playerSettings.0.selectedColor.secondary.getEmoji()
-        player2ColorTextField.text = viewModel.playerSettings.1.selectedColor.primary.getEmoji() + viewModel.playerSettings.1.selectedColor.secondary.getEmoji()
+        let colorData = viewModel.getMatchData().colors
+        player1ColorTextField.text = colorData.player1.primary.getEmoji() + colorData.player1.secondary.getEmoji()
+        player2ColorTextField.text = colorData.player2.primary.getEmoji() + colorData.player2.secondary.getEmoji()
     }
 }
 
@@ -73,11 +74,12 @@ extension MagicSetupViewController {
 extension MagicSetupViewController {
     
     @IBAction func startButtonTapped(_ sender: Any) {
-        show(storyboard: .magic, style: .overFullScreen, passedParameters: (viewModel.playerSettings, viewModel.roundNumber))
+        show(storyboard: .magic, style: .overFullScreen, passedParameters: viewModel.getMatchData())
     }
     
     @IBAction func roundsValueChanged(_ sender: Any) {
-        viewModel.roundNumber = MagicSetupViewModel.RoundNumber(rawValue: roundsSegControl.selectedSegmentIndex) ?? .one
+        guard let numberOfRounds = MatchData.RoundNumber(rawValue: roundsSegControl.selectedSegmentIndex) else { return }
+        viewModel.setNumberOfRounds(rounds:  numberOfRounds)
     }
 }
 
@@ -100,14 +102,8 @@ extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        if component == 0 {
-            viewModel.setPlayerColor(isPlayer1: pickerView == player1ColorPickerView,
-                                     colors: (primary: colorPickerData[0][row],
-                                              secondary: viewModel.getPlayerSettings(forPlayer1: pickerView == player1ColorPickerView).selectedColor.secondary))
-        } else if component == 1 {
-            viewModel.setPlayerColor(isPlayer1: pickerView == player1ColorPickerView,
-                                     colors: (primary: viewModel.getPlayerSettings(forPlayer1: pickerView == player1ColorPickerView).selectedColor.primary, secondary: colorPickerData[1][row]))
-        }
+        let isPrimary = component == 0
+        viewModel.setPlayerColor(forPlayer1: pickerView == player1ColorPickerView, isPrimary: isPrimary, color: colorPickerData[isPrimary ? 0 : 1][row])
         updateColorTextBoxes()
          // use the row to get the selected row from the picker view
          // using the row extract the value from your datasource (array[row])

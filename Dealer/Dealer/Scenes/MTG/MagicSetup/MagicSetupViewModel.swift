@@ -15,13 +15,6 @@ final class MagicSetupViewModel: BaseViewModel {
         static let defaultHP: Int = 20
     }
     
-    enum RoundNumber: Int {
-
-        case one
-        case three
-        case five
-    }
-    
     enum Field {
         
         case color
@@ -29,33 +22,29 @@ final class MagicSetupViewModel: BaseViewModel {
         case startHP
     }
     
-    private(set) var playerSettings = (PlayerSetting(selectedColor: (.white, .blue), name: "Player 1", startHP: 20),
-                                  PlayerSetting(selectedColor: (.black, .red), name: "Player 2", startHP: 20))
+    private var matchData = MatchData()
     
-    var roundNumber: RoundNumber = .one
+    func getMatchData() -> MatchData {
+        return matchData
+    }
     
-    func updatePlayerSettings(isPlayer1: Bool, field: Field, data: Any) {
-        switch field {
-        case .color:
-            if let color = data as? (primary: MTGColor, secondary: MTGColor) {
-                isPlayer1 ? (playerSettings.0.selectedColor = color) : (playerSettings.1.selectedColor = color)
+    func setNumberOfRounds(rounds: MatchData.RoundNumber) {
+        matchData.roundNumber = rounds
+    }
+    
+    func setPlayerColor(forPlayer1: Bool, isPrimary: Bool, color: MTGColor) {
+        if forPlayer1 {
+            if isPrimary {
+                matchData.colors.player1.primary = color
+            } else {
+                matchData.colors.player1.secondary = color
             }
-        case .name:
-            if let name = data as? String {
-                isPlayer1 ? (playerSettings.0.name = name) : (playerSettings.1.name = name)
-            }
-        case .startHP:
-            if let startHP = data as? Int {
-                isPlayer1 ? (playerSettings.0.startHP = startHP) : (playerSettings.1.startHP = startHP)
+        } else {
+            if isPrimary {
+                matchData.colors.player2.primary = color
+            } else {
+                matchData.colors.player2.secondary = color
             }
         }
-    }
-    
-    func setPlayerColor(isPlayer1: Bool, colors: (primary: MTGColor, secondary: MTGColor)) {
-        isPlayer1 ? (playerSettings.0.selectedColor = colors) : (playerSettings.1.selectedColor = colors)
-    }
-    
-    func getPlayerSettings(forPlayer1: Bool) -> PlayerSetting {
-        return forPlayer1 ? playerSettings.0 : playerSettings.1
     }
 }
