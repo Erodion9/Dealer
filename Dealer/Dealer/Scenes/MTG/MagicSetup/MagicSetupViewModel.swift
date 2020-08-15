@@ -47,4 +47,20 @@ final class MagicSetupViewModel: BaseViewModel {
             }
         }
     }
+    
+    func setLifePoints(forPlayer1: Bool, lifePoints: Int) {
+        if forPlayer1 {
+            matchData.lifePoints.player1 = lifePoints
+        } else {
+            matchData.lifePoints.player2 = lifePoints
+        }
+    }
+    
+    func setName(forPlayer1: Bool, name: String) {
+        if forPlayer1 {
+            matchData.playerNames.player1 = name
+        } else {
+            matchData.playerNames.player2 = name
+        }
+    }
 }

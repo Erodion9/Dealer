@@ -25,15 +25,12 @@ final class MagicViewController: BaseViewController, UINavigationControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.stateChangeHandler = { [weak self] change in
-        self?.apply(change: change)
-        }
+        getPassedParameters()
         configureView()
         reloadLifeData()
     }
 
     @IBAction func pictureButtonTapped(_ sender: UIButton) {
-        
         ImagePickerManager().pickImage(self) { (image) in
             let resizedImage = self.resizeImage(image: image, targetSize: sender.frame.size)
             sender.setImage(resizedImage, for: .normal)
@@ -45,6 +42,10 @@ final class MagicViewController: BaseViewController, UINavigationControllerDeleg
 extension MagicViewController {
     
     private func configureView() {
+        //Todo: Move state change handling to BaseViewController and Model
+        viewModel.stateChangeHandler = { [weak self] change in
+        self?.apply(change: change)
+        }
         flipElements()
     }
     
@@ -68,6 +69,12 @@ extension MagicViewController {
         player1ToolbarLifeView.text = String(viewModel.getMatchData().lifePoints.player1)
         player2LifeTextField.text = String(viewModel.getMatchData().lifePoints.player2)
         player2ToolbarLifeView.text = String(viewModel.getMatchData().lifePoints.player2)
+    }
+    
+    private func getPassedParameters() {
+        guard let matchData = passedParameters as? MatchData else { return }
+        viewModel.matchData = matchData
+        print(viewModel.matchData)
     }
 }
 
