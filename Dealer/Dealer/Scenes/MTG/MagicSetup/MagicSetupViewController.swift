@@ -36,6 +36,10 @@ final class MagicSetupViewController: BaseViewController {
         super.viewDidLoad()
         configureView()
     }
+    @IBAction func nameTextFieldEditingChanged(_ sender: UITextField) {
+    guard let name = sender.text else { return }
+        viewModel.setName(forPlayer1: sender.tag == 0, name: name)
+    }
 }
 
 //MARK: - View Configuration
@@ -78,9 +82,15 @@ extension MagicSetupViewController {
         updateLifeTextBoxes()
     }
     
+    private func setupNameTextFields() {
+        player1NameTextField.text = viewModel.getMatchData().playerNames.player1
+        player2NameTextField.text = viewModel.getMatchData().playerNames.player2
+    }
+    
     private func configureView() {
         setupColorPickers()
         setupLifePickers()
+        setupNameTextFields()
     }
 
     private func fillMTGColors() {
