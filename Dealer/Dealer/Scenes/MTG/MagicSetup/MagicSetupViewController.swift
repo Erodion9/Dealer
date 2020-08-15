@@ -10,18 +10,25 @@ import UIKit
 
 final class MagicSetupViewController: BaseViewController {
     
+    private enum Constants {
+        
+        static let maxHPRange: Int = 61
+    }
+    
     @IBOutlet private weak var startButton: UIButton!
     @IBOutlet private weak var roundsSegControl: UISegmentedControl!
     @IBOutlet private weak var player1ColorTextField: UITextField!
     @IBOutlet private weak var player1NameTextField: UITextField!
-    @IBOutlet private weak var player1StartHPTextField: UITextField!
+    @IBOutlet private weak var player1LifeTextField: UITextField!
     @IBOutlet private weak var player2ColorTextField: UITextField!
     @IBOutlet private weak var player2NameTextField: UITextField!
-    @IBOutlet private weak var player2StartHPTextField: UITextField!
+    @IBOutlet private weak var player2LifeTextField: UITextField!
     private var viewModel = MagicSetupViewModel()
     
     private var player1ColorPickerView: UIPickerView?
     private var player2ColorPickerView: UIPickerView?
+    private var player1LifePickerView: UIPickerView?
+    private var player2LifePickerView: UIPickerView?
     
     var colorPickerData = [[MatchData.MTGColor]]()
     
@@ -53,8 +60,27 @@ extension MagicSetupViewController {
         updateColorTextBoxes()
     }
     
+    private func setupLifePickers() {
+        player1LifePickerView = UIPickerView()
+        player2LifePickerView = UIPickerView()
+        
+        player1LifePickerView?.delegate = self
+        player1LifePickerView?.dataSource = self
+        player2LifePickerView?.delegate = self
+        player2LifePickerView?.dataSource = self
+        
+        player1LifeTextField.inputView = player1LifePickerView
+        player2LifeTextField.inputView = player2LifePickerView
+        
+        player1LifeTextField.tintColor = UIColor.clear
+        player2ColorTextField.tintColor = UIColor.clear
+        
+        updateLifeTextBoxes()
+    }
+    
     private func configureView() {
         setupColorPickers()
+        setupLifePickers()
     }
 
     private func fillMTGColors() {
@@ -70,6 +96,11 @@ extension MagicSetupViewController {
         let colorData = viewModel.getMatchData().colors
         player1ColorTextField.text = colorData.player1.primary.getEmoji() + colorData.player1.secondary.getEmoji()
         player2ColorTextField.text = colorData.player2.primary.getEmoji() + colorData.player2.secondary.getEmoji()
+    }
+    
+    private func updateLifeTextBoxes() {
+        player1LifeTextField.text = String(viewModel.getMatchData().lifePoints.player1)
+        player2LifeTextField.text = String(viewModel.getMatchData().lifePoints.player2)
     }
 }
 
@@ -90,24 +121,40 @@ extension MagicSetupViewController {
 extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        if pickerView == player1ColorTextField || pickerView == player2ColorTextField { return 2}
+        else {
+            return 1
+        }
     }
 
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colorPickerData.count
+        if pickerView == player1ColorTextField || pickerView == player2ColorTextField { return colorPickerData.count}
+        else {
+            return Constants.maxHPRange
+        }
     }
 
        // The data to return fopr the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(describing: colorPickerData[component][row])
+        if pickerView == player1ColorTextField || pickerView == player2ColorTextField { return String(describing: colorPickerData[component][row]) }
+        else {
+            return String(row)
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        let isPrimary = component == 0
+        if pickerView == player1ColorTextField || pickerView == player2ColorTextField {
+            let isPrimary = component == 0
         viewModel.setPlayerColor(forPlayer1: pickerView == player1ColorPickerView, isPrimary: isPrimary, color: colorPickerData[isPrimary ? 0 : 1][row])
         updateColorTextBoxes()
+        }
+        else {
+            viewModel.setLifePoints(forPlayer1: pickerView == player1LifePickerView, lifePoints: row)
+            updateLifeTextBoxes()
+        }
+        
          // use the row to get the selected row from the picker view
          // using the row extract the value from your datasource (array[row])
      }

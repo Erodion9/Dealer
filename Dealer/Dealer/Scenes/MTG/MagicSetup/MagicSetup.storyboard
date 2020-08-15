@@ -81,7 +81,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4mR-Q1-Bgz">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4mR-Q1-Bgz">
                                         <rect key="frame" x="0.0" y="225.5" width="100" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="eXL-y4-5Td"/>
@@ -134,7 +134,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZ0-4O-eeF">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZ0-4O-eeF">
                                         <rect key="frame" x="0.0" y="225.5" width="100" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Oic-VQ-O1a"/>
@@ -174,11 +174,11 @@
                     </view>
                     <connections>
                         <outlet property="player1ColorTextField" destination="LmQ-dm-kwO" id="PFH-K7-fHo"/>
+                        <outlet property="player1LifeTextField" destination="XZ0-4O-eeF" id="6sM-Wv-A58"/>
                         <outlet property="player1NameTextField" destination="oAD-YG-jOZ" id="oxD-m5-wZs"/>
-                        <outlet property="player1StartHPTextField" destination="XZ0-4O-eeF" id="6sM-Wv-A58"/>
                         <outlet property="player2ColorTextField" destination="5DB-nV-nDf" id="kkM-7L-3J7"/>
+                        <outlet property="player2LifeTextField" destination="4mR-Q1-Bgz" id="Dva-85-p16"/>
                         <outlet property="player2NameTextField" destination="rUj-XU-JfL" id="Bpl-xL-erT"/>
-                        <outlet property="player2StartHPTextField" destination="4mR-Q1-Bgz" id="Dva-85-p16"/>
                         <outlet property="roundsSegControl" destination="9Yj-Fn-31s" id="ceO-QY-lcF"/>
                         <outlet property="startButton" destination="GEq-hN-c5k" id="q4y-5m-cXh"/>
                     </connections>
