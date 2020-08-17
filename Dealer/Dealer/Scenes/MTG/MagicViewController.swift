@@ -12,6 +12,8 @@ final class MagicViewController: BaseViewController, UINavigationControllerDeleg
     @IBOutlet private weak var player2View: UIView!
     @IBOutlet private weak var player2ToolbarView: UIView!
     @IBOutlet private weak var player2ToolbarLifeView: UILabel!
+    @IBOutlet private weak var player1ToolbarNameLabel: UILabel!
+    @IBOutlet private weak var player2ToolbarNameLabel: UILabel!
     @IBOutlet private weak var player1ToolbarLifeView: UILabel!
     @IBOutlet private weak var player1LifeTextField: UITextField!
     @IBOutlet private weak var player2LifeTextField: UITextField!
@@ -47,6 +49,7 @@ extension MagicViewController {
         self?.apply(change: change)
         }
         flipElements()
+        setPlayerNames()
     }
     
     private func flipElements() {
@@ -59,9 +62,9 @@ extension MagicViewController {
                 player2LifeTextField.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
     }
     
-    private func disableLifeTextFields() {
-        player1LifeTextField.isEnabled = false
-        player2LifeTextField.isEnabled = false
+    private func setPlayerNames() {
+        player1ToolbarNameLabel.text = viewModel.getMatchData().playerNames.player1
+        player2ToolbarNameLabel.text = viewModel.getMatchData().playerNames.player2
     }
     
     private func reloadLifeData() {
@@ -74,7 +77,6 @@ extension MagicViewController {
     private func getPassedParameters() {
         guard let matchData = passedParameters as? MatchData else { return }
         viewModel.matchData = matchData
-        print(viewModel.matchData)
     }
 }
 

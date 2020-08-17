@@ -176,12 +176,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enl-FD-Rik" userLabel="Player1HPView">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ihf-Bg-HPz">
-                                                        <rect key="frame" x="8" y="8.5" width="30" height="23"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="LMv-x6-XS9"/>
-                                                        </constraints>
-                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ3-Do-HTc">
                                                         <rect key="frame" x="87" y="8" width="30" height="24"/>
                                                         <constraints>
@@ -191,15 +185,22 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBa-Kr-LOM">
+                                                        <rect key="frame" x="8" y="8" width="71" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="ihf-Bg-HPz" firstAttribute="top" secondItem="enl-FD-Rik" secondAttribute="top" constant="8" id="3FA-jF-q9t"/>
-                                                    <constraint firstAttribute="bottom" secondItem="ihf-Bg-HPz" secondAttribute="bottom" constant="8" id="5qh-J7-IXu"/>
                                                     <constraint firstAttribute="trailing" secondItem="TJ3-Do-HTc" secondAttribute="trailing" constant="8" id="ADB-cT-V0R"/>
                                                     <constraint firstAttribute="bottom" secondItem="TJ3-Do-HTc" secondAttribute="bottom" constant="8" id="IYy-Az-Bvw"/>
+                                                    <constraint firstItem="TJ3-Do-HTc" firstAttribute="leading" secondItem="JBa-Kr-LOM" secondAttribute="trailing" constant="8" id="XDP-tq-PxN"/>
                                                     <constraint firstItem="TJ3-Do-HTc" firstAttribute="top" secondItem="enl-FD-Rik" secondAttribute="top" constant="8" id="Ygq-kG-q4M"/>
-                                                    <constraint firstItem="ihf-Bg-HPz" firstAttribute="leading" secondItem="enl-FD-Rik" secondAttribute="leading" constant="8" id="tbe-TJ-iNu"/>
+                                                    <constraint firstAttribute="bottom" secondItem="JBa-Kr-LOM" secondAttribute="bottom" constant="8" id="e6d-lm-feu"/>
+                                                    <constraint firstItem="JBa-Kr-LOM" firstAttribute="top" secondItem="enl-FD-Rik" secondAttribute="top" constant="8" id="iNd-4E-z9f"/>
+                                                    <constraint firstItem="JBa-Kr-LOM" firstAttribute="leading" secondItem="enl-FD-Rik" secondAttribute="leading" constant="8" id="syp-iZ-8zv"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mq1-Ps-Gj6" userLabel="FortuneView">
@@ -232,12 +233,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNr-Bd-GkP" userLabel="Player2View">
                                                 <rect key="frame" x="250" y="0.0" width="125" height="40"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0Ss-OG-UFM">
-                                                        <rect key="frame" x="87" y="8.5" width="30" height="23"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="an0-NO-e7d"/>
-                                                        </constraints>
-                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQS-aD-N4t">
                                                         <rect key="frame" x="8" y="8" width="30" height="24"/>
                                                         <constraints>
@@ -247,15 +242,22 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MD5-8c-Zjw">
+                                                        <rect key="frame" x="46" y="8" width="71" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstItem="0Ss-OG-UFM" firstAttribute="top" secondItem="GNr-Bd-GkP" secondAttribute="top" constant="8" id="KaH-bT-PFh"/>
+                                                    <constraint firstItem="MD5-8c-Zjw" firstAttribute="top" secondItem="GNr-Bd-GkP" secondAttribute="top" constant="8" id="Gdk-kO-Z9s"/>
                                                     <constraint firstItem="yQS-aD-N4t" firstAttribute="leading" secondItem="GNr-Bd-GkP" secondAttribute="leading" constant="8" id="M2a-EI-xZw"/>
-                                                    <constraint firstAttribute="bottom" secondItem="0Ss-OG-UFM" secondAttribute="bottom" constant="8" id="Z8Z-BM-oeK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="MD5-8c-Zjw" secondAttribute="bottom" constant="8" id="Szk-JO-GXA"/>
+                                                    <constraint firstItem="MD5-8c-Zjw" firstAttribute="leading" secondItem="yQS-aD-N4t" secondAttribute="trailing" constant="8" id="Zmn-9d-3x9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="MD5-8c-Zjw" secondAttribute="trailing" constant="8" id="cXD-I8-IOX"/>
                                                     <constraint firstAttribute="bottom" secondItem="yQS-aD-N4t" secondAttribute="bottom" constant="8" id="lTS-sE-fxO"/>
                                                     <constraint firstItem="yQS-aD-N4t" firstAttribute="top" secondItem="GNr-Bd-GkP" secondAttribute="top" constant="8" id="oha-d2-CKO"/>
-                                                    <constraint firstAttribute="trailing" secondItem="0Ss-OG-UFM" secondAttribute="trailing" constant="8" id="qBB-n0-hXk"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -292,22 +294,23 @@
                         <outlet property="player1LifeTextField" destination="JRm-U0-ljM" id="o4T-FO-nWs"/>
                         <outlet property="player1PictureButton" destination="DJV-fn-4Cw" id="nLw-fV-3iq"/>
                         <outlet property="player1ToolbarLifeView" destination="TJ3-Do-HTc" id="WGB-hF-HYp"/>
+                        <outlet property="player1ToolbarNameLabel" destination="JBa-Kr-LOM" id="oOe-Jz-QkE"/>
                         <outlet property="player2LifeTextField" destination="sWW-QW-4bA" id="9Mz-Eh-7GQ"/>
                         <outlet property="player2PictureButton" destination="rId-B8-CWW" id="ATz-ZW-g8J"/>
                         <outlet property="player2ToolbarLifeView" destination="yQS-aD-N4t" id="OlK-0V-dHp"/>
+                        <outlet property="player2ToolbarNameLabel" destination="MD5-8c-Zjw" id="Fkc-L6-213"/>
                         <outlet property="player2ToolbarView" destination="GNr-Bd-GkP" id="u1d-9E-c4b"/>
                         <outlet property="player2View" destination="t94-9t-PzE" id="tnB-1C-oHG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCU-G0-PYG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-649.27536231884062" y="153.34821428571428"/>
+            <point key="canvasLocation" x="-650.39999999999998" y="152.47376311844079"/>
         </scene>
     </scenes>
     <resources>
         <image name="bitcoinsign.circle" catalog="system" width="128" height="121"/>
         <image name="minus.rectangle.fill" catalog="system" width="128" height="93"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="placeholder_dice" width="512" height="512"/>
         <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
