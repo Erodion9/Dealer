@@ -30,7 +30,7 @@ final class MagicSetupViewController: BaseViewController {
     private var player1LifePickerView: UIPickerView?
     private var player2LifePickerView: UIPickerView?
     
-    var colorPickerData = [[MatchData.MTGColor]]()
+    private var colorPickerData = [[MatchData.MTGColor]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,7 +145,6 @@ extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource
         }
     }
 
-       // The data to return fopr the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == player1ColorTextField || pickerView == player2ColorTextField { return String(describing: colorPickerData[component][row]) }
         else {
@@ -164,9 +163,6 @@ extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource
             viewModel.setLifePoints(forPlayer1: pickerView == player1LifePickerView, lifePoints: row)
             updateLifeTextBoxes()
         }
-        
-         // use the row to get the selected row from the picker view
-         // using the row extract the value from your datasource (array[row])
      }
 }
 
