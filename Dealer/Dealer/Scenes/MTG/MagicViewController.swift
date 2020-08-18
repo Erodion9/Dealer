@@ -31,13 +31,6 @@ final class MagicViewController: BaseViewController, UINavigationControllerDeleg
         configureView()
         reloadLifeData()
     }
-
-    @IBAction func pictureButtonTapped(_ sender: UIButton) {
-        ImagePickerManager().pickImage(self) { (image) in
-            let resizedImage = self.resizeImage(image: image, targetSize: sender.frame.size)
-            sender.setImage(resizedImage, for: .normal)
-        }
-    }
 }
 
 //MARK: - View Configuration
@@ -90,6 +83,18 @@ private extension MagicViewController {
     @IBAction func decrementButtonTapped(_ sender: UIButton) {
         viewModel.decrementLife(isPlayer1: sender.tag == 0)
     }
+    
+    
+    @IBAction func pictureButtonTapped(_ sender: UIButton) {
+        ImagePickerManager().pickImage(self) { (image) in
+            let resizedImage = self.resizeImage(image: image, targetSize: sender.frame.size)
+            sender.setImage(resizedImage, for: .normal)
+        }
+    }
+    
+    @IBAction func diceButtonTapped(_ sender: Any) {
+        show(storyboard: .dice, style: .formSheet, passedParameters: nil)
+    }
 }
 
 // MARK: - State Change Handling
@@ -101,5 +106,14 @@ private extension MagicViewController {
             reloadLifeData()
             break
         }
+    }
+}
+
+//MARK: - Routing
+extension MagicViewController: Routable {
+    
+    enum StoryboardIdentifier: String {
+        case dice = "MagicDiceView"
+        case coin = "MagicCoinView"
     }
 }

@@ -166,6 +166,7 @@ extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource
      }
 }
 
+//MARK: - Routing
 extension MagicSetupViewController: Routable {
     
     enum StoryboardIdentifier: String {

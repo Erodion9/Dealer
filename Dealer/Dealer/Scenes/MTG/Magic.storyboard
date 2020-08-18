@@ -212,6 +212,9 @@
                                                             <constraint firstAttribute="width" constant="35" id="jJX-NN-bLO"/>
                                                         </constraints>
                                                         <state key="normal" image="placeholder_dice"/>
+                                                        <connections>
+                                                            <action selector="diceButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="W7R-yN-3hc"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ce-zx-C4j" userLabel="CoinTossbutton">
                                                         <rect key="frame" x="81" y="2" width="36" height="36"/>
