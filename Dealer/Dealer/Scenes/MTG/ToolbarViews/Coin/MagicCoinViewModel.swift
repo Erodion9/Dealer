@@ -8,4 +8,13 @@
 
 final class MagicCoinViewModel: BaseViewModel {
     
+    enum Change {
+        case updateCoinImage(coin: Bool)
+    }
+    
+    var stateChangeHandler: ((Change) -> (Void))?
+    
+    func tossCoin() {
+        stateChangeHandler?(.updateCoinImage(coin: Bool.random()))
+    }
 }
