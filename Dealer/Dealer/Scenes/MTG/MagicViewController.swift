@@ -95,6 +95,10 @@ private extension MagicViewController {
     @IBAction func diceButtonTapped(_ sender: Any) {
         show(storyboard: .dice, style: .formSheet, passedParameters: nil)
     }
+    
+    @IBAction func coinButtonTapped(_ sender: Any) {
+        show(storyboard: .coin, style: .formSheet, passedParameters: nil)
+    }
 }
 
 // MARK: - State Change Handling

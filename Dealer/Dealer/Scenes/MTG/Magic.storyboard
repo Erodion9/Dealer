@@ -221,6 +221,9 @@
                                                         <state key="normal" image="bitcoinsign.circle" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="31"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="coinButtonTapped:" destination="008-1j-ed0" eventType="touchUpInside" id="rda-QT-Zs6"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
