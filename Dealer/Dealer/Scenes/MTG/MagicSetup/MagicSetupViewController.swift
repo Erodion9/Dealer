@@ -131,7 +131,9 @@ extension MagicSetupViewController {
 extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        if pickerView == player1ColorTextField || pickerView == player2ColorTextField { return 2}
+        if pickerView == player1ColorPickerView || pickerView == player2ColorPickerView {
+            return 2
+        }
         else {
             return 1
         }
@@ -139,14 +141,18 @@ extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource
 
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == player1ColorTextField || pickerView == player2ColorTextField { return colorPickerData.count}
+        if pickerView == player1ColorPickerView || pickerView == player2ColorPickerView {
+            return colorPickerData.count
+        }
         else {
             return Constants.maxHPRange
         }
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == player1ColorTextField || pickerView == player2ColorTextField { return String(describing: colorPickerData[component][row]) }
+        if pickerView == player1ColorPickerView || pickerView == player2ColorPickerView {
+            return String(describing: colorPickerData[component][row])
+        }
         else {
             return String(row)
         }
@@ -154,7 +160,7 @@ extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
     {
-        if pickerView == player1ColorTextField || pickerView == player2ColorTextField {
+        if pickerView == player1ColorPickerView || pickerView == player2ColorPickerView {
             let isPrimary = component == 0
         viewModel.setPlayerColor(forPlayer1: pickerView == player1ColorPickerView, isPrimary: isPrimary, color: colorPickerData[isPrimary ? 0 : 1][row])
         updateColorTextBoxes()
