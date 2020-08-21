@@ -28,6 +28,9 @@
 		40476E2D23FB2CF6001C3682 /* Magic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40476E2C23FB2CF6001C3682 /* Magic.storyboard */; };
 		40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */; };
 		40476E3223FB2EC6001C3682 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E3123FB2EC6001C3682 /* Routable.swift */; };
+		4061317B24F04D51000EB14C /* YGOSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4061317A24F04D51000EB14C /* YGOSetup.storyboard */; };
+		4061317D24F04D5F000EB14C /* YGOSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061317C24F04D5F000EB14C /* YGOSetupViewController.swift */; };
+		4061317F24F04D6D000EB14C /* YGOSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061317E24F04D6D000EB14C /* YGOSetupViewModel.swift */; };
 		40780CE42403ADD600D4B269 /* MagicSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40780CE32403ADD600D4B269 /* MagicSetupViewModel.swift */; };
 		407A416923FB61BA00EAAB08 /* MagicSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */; };
 		407A416B23FB634900EAAB08 /* MagicSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */; };
@@ -58,6 +61,9 @@
 		40476E2C23FB2CF6001C3682 /* Magic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magic.storyboard; sourceTree = "<group>"; };
 		40476E2F23FB2EA1001C3682 /* SegueHandlerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		40476E3123FB2EC6001C3682 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		4061317A24F04D51000EB14C /* YGOSetup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YGOSetup.storyboard; sourceTree = "<group>"; };
+		4061317C24F04D5F000EB14C /* YGOSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YGOSetupViewController.swift; sourceTree = "<group>"; };
+		4061317E24F04D6D000EB14C /* YGOSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YGOSetupViewModel.swift; sourceTree = "<group>"; };
 		40780CE32403ADD600D4B269 /* MagicSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSetupViewModel.swift; sourceTree = "<group>"; };
 		407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MagicSetup.storyboard; sourceTree = "<group>"; };
 		407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSetupViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 		400B4F3C23DCF72800511C1D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4061317824F04D13000EB14C /* YGO */,
 				40476E2923FB2C9C001C3682 /* MTG */,
 				400B4F3D23DCF72E00511C1D /* Selection */,
 			);
@@ -194,6 +201,24 @@
 			path = Routing;
 			sourceTree = "<group>";
 		};
+		4061317824F04D13000EB14C /* YGO */ = {
+			isa = PBXGroup;
+			children = (
+				4061317924F04D2B000EB14C /* YGOSetup */,
+			);
+			path = YGO;
+			sourceTree = "<group>";
+		};
+		4061317924F04D2B000EB14C /* YGOSetup */ = {
+			isa = PBXGroup;
+			children = (
+				4061317A24F04D51000EB14C /* YGOSetup.storyboard */,
+				4061317C24F04D5F000EB14C /* YGOSetupViewController.swift */,
+				4061317E24F04D6D000EB14C /* YGOSetupViewModel.swift */,
+			);
+			path = YGOSetup;
+			sourceTree = "<group>";
+		};
 		40780CE22403ADC200D4B269 /* MagicSetup */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +297,7 @@
 			files = (
 				40476E2D23FB2CF6001C3682 /* Magic.storyboard in Resources */,
 				407A416923FB61BA00EAAB08 /* MagicSetup.storyboard in Resources */,
+				4061317B24F04D51000EB14C /* YGOSetup.storyboard in Resources */,
 				400B4F3423DCF6BA00511C1D /* LaunchScreen.storyboard in Resources */,
 				40123B6F24EEDE3B00A09C36 /* MagicCoinView.storyboard in Resources */,
 				400B4F3123DCF6BA00511C1D /* Assets.xcassets in Resources */,
@@ -298,12 +324,14 @@
 				400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */,
 				400B4F2823DCF6B900511C1D /* AppDelegate.swift in Sources */,
 				4013CF5A24D4BC5300BCEDC3 /* MatchData.swift in Sources */,
+				4061317D24F04D5F000EB14C /* YGOSetupViewController.swift in Sources */,
 				40780CE42403ADD600D4B269 /* MagicSetupViewModel.swift in Sources */,
 				40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */,
 				40123B6B24EEDE2400A09C36 /* MagicCoinViewController.swift in Sources */,
 				400B4F2A23DCF6B900511C1D /* SceneDelegate.swift in Sources */,
 				40476E3223FB2EC6001C3682 /* Routable.swift in Sources */,
 				403274D024EC36FC00F2C321 /* MagicDiceViewController.swift in Sources */,
+				4061317F24F04D6D000EB14C /* YGOSetupViewModel.swift in Sources */,
 				40333AB424D59D9500B8D38D /* ImagePickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
