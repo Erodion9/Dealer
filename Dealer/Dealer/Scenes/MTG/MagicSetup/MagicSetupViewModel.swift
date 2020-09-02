@@ -22,7 +22,7 @@ final class MagicSetupViewModel: BaseViewModel {
         case startHP
     }
     
-    private var matchData = MatchData()
+    private var matchData = MatchData(matchType: .magic)
     
     func getMatchData() -> MatchData {
         return matchData

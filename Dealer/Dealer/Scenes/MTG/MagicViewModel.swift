@@ -13,7 +13,7 @@ final class MagicViewModel: BaseViewModel {
     }
     
     var stateChangeHandler: ((Change) -> (Void))?
-    var matchData = MatchData()
+    var matchData = MatchData(matchType: .magic)
     
     func incrementLife(isPlayer1: Bool) {
         if isPlayer1 {

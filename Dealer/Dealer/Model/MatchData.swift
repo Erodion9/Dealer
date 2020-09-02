@@ -8,6 +8,11 @@
 
 struct MatchData {
     
+    enum MatchType {
+        case magic
+        case ygo
+    }
+    
     enum MTGColor: CaseIterable {
         
         case blue
@@ -53,5 +58,12 @@ struct MatchData {
     var playerNames: (player1: String, player2: String) = (player1: "Player1", player2: "Player2")
     var lifePoints: (player1: Int, player2: Int) = (player1: 20, player2: 20)
 
-    
+    init(matchType: MatchType) {
+        switch matchType {
+        case .magic:
+            lifePoints = (player1: 20, player2: 20)
+        case .ygo:
+            lifePoints = (player1: 8000, player2: 8000)
+        }
+    }
 }
