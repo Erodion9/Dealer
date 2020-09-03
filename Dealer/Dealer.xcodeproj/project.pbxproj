@@ -15,14 +15,17 @@
 		400B4F3423DCF6BA00511C1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400B4F3223DCF6BA00511C1D /* LaunchScreen.storyboard */; };
 		400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F3F23DCF76800511C1D /* BaseViewController.swift */; };
 		400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400B4F4323DCF7A300511C1D /* BaseViewModel.swift */; };
-		40123B6B24EEDE2400A09C36 /* MagicCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40123B6A24EEDE2400A09C36 /* MagicCoinViewController.swift */; };
-		40123B6D24EEDE2F00A09C36 /* MagicCoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40123B6C24EEDE2F00A09C36 /* MagicCoinViewModel.swift */; };
-		40123B6F24EEDE3B00A09C36 /* MagicCoinView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40123B6E24EEDE3B00A09C36 /* MagicCoinView.storyboard */; };
+		40123B6B24EEDE2400A09C36 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40123B6A24EEDE2400A09C36 /* CoinViewController.swift */; };
+		40123B6D24EEDE2F00A09C36 /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40123B6C24EEDE2F00A09C36 /* CoinViewModel.swift */; };
+		40123B6F24EEDE3B00A09C36 /* Coin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40123B6E24EEDE3B00A09C36 /* Coin.storyboard */; };
 		4013CF5724D4AB6700BCEDC3 /* MagicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013CF5624D4AB6700BCEDC3 /* MagicViewModel.swift */; };
 		4013CF5A24D4BC5300BCEDC3 /* MatchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013CF5924D4BC5300BCEDC3 /* MatchData.swift */; };
-		403274CE24EC36EC00F2C321 /* MagicDiceView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403274CD24EC36EC00F2C321 /* MagicDiceView.storyboard */; };
-		403274D024EC36FC00F2C321 /* MagicDiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403274CF24EC36FC00F2C321 /* MagicDiceViewController.swift */; };
-		403274D224EC370F00F2C321 /* MagicDiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403274D124EC370F00F2C321 /* MagicDiceViewModel.swift */; };
+		403274CE24EC36EC00F2C321 /* Dice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403274CD24EC36EC00F2C321 /* Dice.storyboard */; };
+		403274D024EC36FC00F2C321 /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403274CF24EC36FC00F2C321 /* DiceViewController.swift */; };
+		403274D224EC370F00F2C321 /* DiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403274D124EC370F00F2C321 /* DiceViewModel.swift */; };
+		4032944C25010681009BBC50 /* YGO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4032944B25010681009BBC50 /* YGO.storyboard */; };
+		4032944E250106F7009BBC50 /* YGOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4032944D250106F7009BBC50 /* YGOViewController.swift */; };
+		4032945025010703009BBC50 /* YGOViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4032944F25010703009BBC50 /* YGOViewModel.swift */; };
 		40333AB424D59D9500B8D38D /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40333AB324D59D9500B8D38D /* ImagePickerManager.swift */; };
 		40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40476E2A23FB2CAF001C3682 /* MagicViewController.swift */; };
 		40476E2D23FB2CF6001C3682 /* Magic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40476E2C23FB2CF6001C3682 /* Magic.storyboard */; };
@@ -33,6 +36,8 @@
 		40780CE42403ADD600D4B269 /* MagicSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40780CE32403ADD600D4B269 /* MagicSetupViewModel.swift */; };
 		407A416923FB61BA00EAAB08 /* MagicSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */; };
 		407A416B23FB634900EAAB08 /* MagicSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */; };
+		4084791525011BB80084260D /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084791425011BB80084260D /* MatchViewController.swift */; };
+		4084791725011BEE0084260D /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4084791625011BEE0084260D /* MatchViewModel.swift */; };
 		409BEE4E24FFC9C900BAA438 /* YGOSetup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 409BEE4D24FFC9C900BAA438 /* YGOSetup.storyboard */; };
 		40F0D9DD23F7828100FF4641 /* Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0D9DC23F7828100FF4641 /* Selection.swift */; };
 /* End PBXBuildFile section */
@@ -48,14 +53,17 @@
 		400B4F3523DCF6BA00511C1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		400B4F3F23DCF76800511C1D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		400B4F4323DCF7A300511C1D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		40123B6A24EEDE2400A09C36 /* MagicCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCoinViewController.swift; sourceTree = "<group>"; };
-		40123B6C24EEDE2F00A09C36 /* MagicCoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCoinViewModel.swift; sourceTree = "<group>"; };
-		40123B6E24EEDE3B00A09C36 /* MagicCoinView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MagicCoinView.storyboard; sourceTree = "<group>"; };
+		40123B6A24EEDE2400A09C36 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
+		40123B6C24EEDE2F00A09C36 /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
+		40123B6E24EEDE3B00A09C36 /* Coin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coin.storyboard; sourceTree = "<group>"; };
 		4013CF5624D4AB6700BCEDC3 /* MagicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewModel.swift; sourceTree = "<group>"; };
 		4013CF5924D4BC5300BCEDC3 /* MatchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchData.swift; sourceTree = "<group>"; };
-		403274CD24EC36EC00F2C321 /* MagicDiceView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MagicDiceView.storyboard; sourceTree = "<group>"; };
-		403274CF24EC36FC00F2C321 /* MagicDiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicDiceViewController.swift; sourceTree = "<group>"; };
-		403274D124EC370F00F2C321 /* MagicDiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicDiceViewModel.swift; sourceTree = "<group>"; };
+		403274CD24EC36EC00F2C321 /* Dice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dice.storyboard; sourceTree = "<group>"; };
+		403274CF24EC36FC00F2C321 /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
+		403274D124EC370F00F2C321 /* DiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewModel.swift; sourceTree = "<group>"; };
+		4032944B25010681009BBC50 /* YGO.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YGO.storyboard; sourceTree = "<group>"; };
+		4032944D250106F7009BBC50 /* YGOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YGOViewController.swift; sourceTree = "<group>"; };
+		4032944F25010703009BBC50 /* YGOViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YGOViewModel.swift; sourceTree = "<group>"; };
 		40333AB324D59D9500B8D38D /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		40476E2A23FB2CAF001C3682 /* MagicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicViewController.swift; sourceTree = "<group>"; };
 		40476E2C23FB2CF6001C3682 /* Magic.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Magic.storyboard; sourceTree = "<group>"; };
@@ -66,6 +74,8 @@
 		40780CE32403ADD600D4B269 /* MagicSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSetupViewModel.swift; sourceTree = "<group>"; };
 		407A416823FB61BA00EAAB08 /* MagicSetup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MagicSetup.storyboard; sourceTree = "<group>"; };
 		407A416A23FB634900EAAB08 /* MagicSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSetupViewController.swift; sourceTree = "<group>"; };
+		4084791425011BB80084260D /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		4084791625011BEE0084260D /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		409BEE4D24FFC9C900BAA438 /* YGOSetup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YGOSetup.storyboard; sourceTree = "<group>"; };
 		40F0D9DC23F7828100FF4641 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +125,7 @@
 		400B4F3C23DCF72800511C1D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				403274CC24EC36C100F2C321 /* ToolbarViews */,
 				4061317824F04D13000EB14C /* YGO */,
 				40476E2923FB2C9C001C3682 /* MTG */,
 				400B4F3D23DCF72E00511C1D /* Selection */,
@@ -134,6 +145,7 @@
 		400B4F3E23DCF75C00511C1D /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4084791325010B4E0084260D /* MatchView */,
 				40476E2E23FB2E8F001C3682 /* Routing */,
 				40F0D9DB23F7827600FF4641 /* Enums */,
 				400B4F3F23DCF76800511C1D /* BaseViewController.swift */,
@@ -146,9 +158,9 @@
 		40123B6924EEDE0700A09C36 /* Coin */ = {
 			isa = PBXGroup;
 			children = (
-				40123B6A24EEDE2400A09C36 /* MagicCoinViewController.swift */,
-				40123B6C24EEDE2F00A09C36 /* MagicCoinViewModel.swift */,
-				40123B6E24EEDE3B00A09C36 /* MagicCoinView.storyboard */,
+				40123B6A24EEDE2400A09C36 /* CoinViewController.swift */,
+				40123B6C24EEDE2F00A09C36 /* CoinViewModel.swift */,
+				40123B6E24EEDE3B00A09C36 /* Coin.storyboard */,
 			);
 			path = Coin;
 			sourceTree = "<group>";
@@ -173,9 +185,9 @@
 		403274D324EC377000F2C321 /* Dice */ = {
 			isa = PBXGroup;
 			children = (
-				403274CD24EC36EC00F2C321 /* MagicDiceView.storyboard */,
-				403274CF24EC36FC00F2C321 /* MagicDiceViewController.swift */,
-				403274D124EC370F00F2C321 /* MagicDiceViewModel.swift */,
+				403274CD24EC36EC00F2C321 /* Dice.storyboard */,
+				403274CF24EC36FC00F2C321 /* DiceViewController.swift */,
+				403274D124EC370F00F2C321 /* DiceViewModel.swift */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -183,7 +195,6 @@
 		40476E2923FB2C9C001C3682 /* MTG */ = {
 			isa = PBXGroup;
 			children = (
-				403274CC24EC36C100F2C321 /* ToolbarViews */,
 				40780CE22403ADC200D4B269 /* MagicSetup */,
 				40476E2A23FB2CAF001C3682 /* MagicViewController.swift */,
 				40476E2C23FB2CF6001C3682 /* Magic.storyboard */,
@@ -205,6 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				4061317924F04D2B000EB14C /* YGOSetup */,
+				4032944B25010681009BBC50 /* YGO.storyboard */,
+				4032944D250106F7009BBC50 /* YGOViewController.swift */,
+				4032944F25010703009BBC50 /* YGOViewModel.swift */,
 			);
 			path = YGO;
 			sourceTree = "<group>";
@@ -227,6 +241,15 @@
 				40780CE32403ADD600D4B269 /* MagicSetupViewModel.swift */,
 			);
 			path = MagicSetup;
+			sourceTree = "<group>";
+		};
+		4084791325010B4E0084260D /* MatchView */ = {
+			isa = PBXGroup;
+			children = (
+				4084791425011BB80084260D /* MatchViewController.swift */,
+				4084791625011BEE0084260D /* MatchViewModel.swift */,
+			);
+			path = MatchView;
 			sourceTree = "<group>";
 		};
 		40F0D9DB23F7827600FF4641 /* Enums */ = {
@@ -299,9 +322,10 @@
 				407A416923FB61BA00EAAB08 /* MagicSetup.storyboard in Resources */,
 				409BEE4E24FFC9C900BAA438 /* YGOSetup.storyboard in Resources */,
 				400B4F3423DCF6BA00511C1D /* LaunchScreen.storyboard in Resources */,
-				40123B6F24EEDE3B00A09C36 /* MagicCoinView.storyboard in Resources */,
+				4032944C25010681009BBC50 /* YGO.storyboard in Resources */,
+				40123B6F24EEDE3B00A09C36 /* Coin.storyboard in Resources */,
 				400B4F3123DCF6BA00511C1D /* Assets.xcassets in Resources */,
-				403274CE24EC36EC00F2C321 /* MagicDiceView.storyboard in Resources */,
+				403274CE24EC36EC00F2C321 /* Dice.storyboard in Resources */,
 				400B4F2F23DCF6B900511C1D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,22 +339,26 @@
 			files = (
 				40F0D9DD23F7828100FF4641 /* Selection.swift in Sources */,
 				400B4F2C23DCF6B900511C1D /* SelectionViewController.swift in Sources */,
+				4032945025010703009BBC50 /* YGOViewModel.swift in Sources */,
 				407A416B23FB634900EAAB08 /* MagicSetupViewController.swift in Sources */,
+				4084791525011BB80084260D /* MatchViewController.swift in Sources */,
 				400B4F4423DCF7A300511C1D /* BaseViewModel.swift in Sources */,
 				40476E2B23FB2CAF001C3682 /* MagicViewController.swift in Sources */,
-				403274D224EC370F00F2C321 /* MagicDiceViewModel.swift in Sources */,
+				403274D224EC370F00F2C321 /* DiceViewModel.swift in Sources */,
 				4013CF5724D4AB6700BCEDC3 /* MagicViewModel.swift in Sources */,
-				40123B6D24EEDE2F00A09C36 /* MagicCoinViewModel.swift in Sources */,
+				40123B6D24EEDE2F00A09C36 /* CoinViewModel.swift in Sources */,
 				400B4F4023DCF76800511C1D /* BaseViewController.swift in Sources */,
 				400B4F2823DCF6B900511C1D /* AppDelegate.swift in Sources */,
 				4013CF5A24D4BC5300BCEDC3 /* MatchData.swift in Sources */,
 				4061317D24F04D5F000EB14C /* YGOSetupViewController.swift in Sources */,
 				40780CE42403ADD600D4B269 /* MagicSetupViewModel.swift in Sources */,
 				40476E3023FB2EA1001C3682 /* SegueHandlerType.swift in Sources */,
-				40123B6B24EEDE2400A09C36 /* MagicCoinViewController.swift in Sources */,
+				4084791725011BEE0084260D /* MatchViewModel.swift in Sources */,
+				40123B6B24EEDE2400A09C36 /* CoinViewController.swift in Sources */,
 				400B4F2A23DCF6B900511C1D /* SceneDelegate.swift in Sources */,
 				40476E3223FB2EC6001C3682 /* Routable.swift in Sources */,
-				403274D024EC36FC00F2C321 /* MagicDiceViewController.swift in Sources */,
+				4032944E250106F7009BBC50 /* YGOViewController.swift in Sources */,
+				403274D024EC36FC00F2C321 /* DiceViewController.swift in Sources */,
 				4061317F24F04D6D000EB14C /* YGOSetupViewModel.swift in Sources */,
 				40333AB424D59D9500B8D38D /* ImagePickerManager.swift in Sources */,
 			);

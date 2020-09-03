@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QEs-MF-gjA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Coin View Controller-->
+        <scene sceneID="B0y-7K-JAr">
+            <objects>
+                <viewController storyboardIdentifier="Coin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QEs-MF-gjA" customClass="CoinViewController" customModule="Dealer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dwd-b4-eaf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceBackground" translatesAutoresizingMaskIntoConstraints="NO" id="9fl-2b-A2d">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fi-xV-Gpi">
+                                <rect key="frame" x="198.5" y="197.5" width="203" height="205"/>
+                                <state key="normal" image="Coin_Heads"/>
+                                <connections>
+                                    <action selector="coinButtonTapped:" destination="QEs-MF-gjA" eventType="touchUpInside" id="Zro-y0-R8E"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9fl-2b-A2d" firstAttribute="top" secondItem="Dwd-b4-eaf" secondAttribute="top" id="EGH-LU-DO4"/>
+                            <constraint firstItem="9fl-2b-A2d" firstAttribute="leading" secondItem="4tc-Bt-oI8" secondAttribute="leading" id="Ihg-KE-M7k"/>
+                            <constraint firstItem="4tc-Bt-oI8" firstAttribute="trailing" secondItem="9fl-2b-A2d" secondAttribute="trailing" id="cth-ZT-HOH"/>
+                            <constraint firstAttribute="bottom" secondItem="9fl-2b-A2d" secondAttribute="bottom" id="enZ-6p-eMW"/>
+                            <constraint firstItem="0Fi-xV-Gpi" firstAttribute="centerX" secondItem="Dwd-b4-eaf" secondAttribute="centerX" id="f2E-3I-xKJ"/>
+                            <constraint firstItem="0Fi-xV-Gpi" firstAttribute="centerY" secondItem="Dwd-b4-eaf" secondAttribute="centerY" id="iAh-LG-BUe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4tc-Bt-oI8"/>
+                    </view>
+                    <connections>
+                        <outlet property="coinButton" destination="0Fi-xV-Gpi" id="6b1-2q-6pX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTE-rH-7qS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="151"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Coin_Heads" width="203" height="205"/>
+        <image name="diceBackground" width="333.5" height="311"/>
+    </resources>
+</document>

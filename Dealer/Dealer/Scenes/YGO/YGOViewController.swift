@@ -1,13 +1,14 @@
 //
-//  MagicViewController.swift
+//  YGOViewController.swift
 //  Dealer
 //
-//  Created by Deniz Mavi on 17.02.2020.
+//  Created by Deniz Mavi on 3.09.2020.
 //  Copyright © 2020 Deniz Mavi. All rights reserved.
 //
+
 import UIKit
 
-final class MagicViewController: MatchViewController, UINavigationControllerDelegate {
+final class YGOViewController: MatchViewController, UINavigationControllerDelegate {
     
     @IBOutlet private weak var player2View: UIView!
     @IBOutlet private weak var player2ToolbarView: UIView!
@@ -21,9 +22,9 @@ final class MagicViewController: MatchViewController, UINavigationControllerDele
     @IBOutlet private weak var player2PictureButton: UIButton!
     
     private var imagePicker = UIImagePickerController()
-    
-    private var viewModel = MagicViewModel()
+    private var viewModel = YGOViewModel()
     private var player1PicturePressed = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,13 +32,17 @@ final class MagicViewController: MatchViewController, UINavigationControllerDele
         configureView()
         reloadLifeData()
     }
+    @IBAction func lifeTextFieldTapped(_ sender: UITextField) {
+        sender.selectedTextRange = sender.textRange(from: sender.beginningOfDocument, to: sender.endOfDocument)
+    }
 }
 
 //MARK: - View Configuration
-extension MagicViewController {
+extension YGOViewController {
     
     private func configureView() {
         //Todo: Move state change handling to BaseViewController and Model
+        viewModel = YGOViewModel()
         viewModel.stateChangeHandler = { [weak self] change in
         self?.apply(change: change)
         }
@@ -74,7 +79,7 @@ extension MagicViewController {
 }
 
 //MARK: - Actions
-private extension MagicViewController {
+private extension YGOViewController {
 
     @IBAction func incrementButtonTapped(_ sender: UIButton) {
         viewModel.incrementLife(isPlayer1: sender.tag == 0)
@@ -83,6 +88,7 @@ private extension MagicViewController {
     @IBAction func decrementButtonTapped(_ sender: UIButton) {
         viewModel.decrementLife(isPlayer1: sender.tag == 0)
     }
+    
     
     @IBAction func pictureButtonTapped(_ sender: UIButton) {
         ImagePickerManager().pickImage(self) { (image) in
@@ -98,16 +104,12 @@ private extension MagicViewController {
     @IBAction func coinButtonTapped(_ sender: Any) {
         show(storyboard: .coin, style: .formSheet, passedParameters: nil)
     }
-    
-    @IBAction func lifeTextFieldTapped(_ sender: UITextField) {
-        sender.selectedTextRange = sender.textRange(from: sender.beginningOfDocument, to: sender.endOfDocument)
-    }
 }
 
 // MARK: - State Change Handling
-private extension MagicViewController {
+private extension YGOViewController {
 
-    func apply(change: MagicViewModel.Change) {
+    func apply(change: YGOViewModel.Change) {
         switch change {
         case .reloadLife():
             reloadLifeData()

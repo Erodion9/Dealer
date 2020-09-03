@@ -175,6 +175,6 @@ extension YGOSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 extension YGOSetupViewController: Routable {
     
     enum StoryboardIdentifier: String {
-        case YGO = "Yugioh"
+        case YGO = "YGO"
     }
 }

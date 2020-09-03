@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X73-lL-K9z">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dice View Controller-->
+        <scene sceneID="M5K-8w-xP5">
+            <objects>
+                <viewController storyboardIdentifier="Dice" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X73-lL-K9z" customClass="DiceViewController" customModule="Dealer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7GC-ul-GcP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceBackground" translatesAutoresizingMaskIntoConstraints="NO" id="feW-U7-mwf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TP-Gj-2p1">
+                                <rect key="frame" x="225" y="225" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8Gn-he-FXI"/>
+                                    <constraint firstAttribute="width" constant="150" id="XK9-8z-aOI"/>
+                                </constraints>
+                                <state key="normal" image="dice6"/>
+                                <connections>
+                                    <action selector="diceButtonTapped:" destination="X73-lL-K9z" eventType="touchUpInside" id="6CW-PV-yhb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aAq-Ms-4Hu" firstAttribute="trailing" secondItem="feW-U7-mwf" secondAttribute="trailing" id="6ZP-fY-YkB"/>
+                            <constraint firstAttribute="bottom" secondItem="feW-U7-mwf" secondAttribute="bottom" id="9fk-fx-Ir5"/>
+                            <constraint firstItem="9TP-Gj-2p1" firstAttribute="centerY" secondItem="7GC-ul-GcP" secondAttribute="centerY" id="OoC-DI-RoF"/>
+                            <constraint firstItem="feW-U7-mwf" firstAttribute="top" secondItem="7GC-ul-GcP" secondAttribute="top" id="cdv-bD-Hbu"/>
+                            <constraint firstItem="9TP-Gj-2p1" firstAttribute="centerX" secondItem="7GC-ul-GcP" secondAttribute="centerX" id="hk2-lx-Cyc"/>
+                            <constraint firstItem="feW-U7-mwf" firstAttribute="leading" secondItem="aAq-Ms-4Hu" secondAttribute="leading" id="mtp-3B-5fe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aAq-Ms-4Hu"/>
+                    </view>
+                    <connections>
+                        <outlet property="diceButton" destination="9TP-Gj-2p1" id="CIE-GG-avq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZ5-kW-Xvl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice6" width="150" height="150"/>
+        <image name="diceBackground" width="333.5" height="311"/>
+    </resources>
+</document>
