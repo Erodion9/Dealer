@@ -9,6 +9,8 @@ import UIKit
 
 final class MagicViewController: MatchViewController, UINavigationControllerDelegate {
     
+    @IBOutlet private weak var player1BackgroundView: UIView!
+    @IBOutlet private weak var player2BackgroundView: UIView!
     @IBOutlet private weak var player2View: UIView!
     @IBOutlet private weak var player2ToolbarView: UIView!
     @IBOutlet private weak var player2ToolbarLifeView: UILabel!
@@ -30,6 +32,7 @@ final class MagicViewController: MatchViewController, UINavigationControllerDele
         getPassedParameters()
         configureView()
         reloadLifeData()
+        setGradientBackgrounds()
     }
 }
 
@@ -53,6 +56,27 @@ extension MagicViewController {
         
         player1LifeTextField.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
                 player2LifeTextField.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+    }
+    
+    private func setGradientBackgrounds() {
+        let player1GradientLayer = CAGradientLayer()
+        
+//        player1GradientLayer.type = .radial
+        player1GradientLayer.position = player1BackgroundView.layer.position
+        player1GradientLayer.frame = player1BackgroundView.bounds
+//        player1GradientLayer.startPoint = CGPoint(x: 0.5, y: 0.5)
+//        let endPoint = 0.5 + player1BackgroundView.frame.size.width / player1BackgroundView.frame.size.height / 2
+//        player1GradientLayer.endPoint = CGPoint(x: 1, y: endPoint)
+        player1GradientLayer.colors = viewModel.getGradientColors(isPlayer1: true)
+        
+        player1BackgroundView.layer.insertSublayer(player1GradientLayer, at: 0)
+        
+        let player2GradientLayer = CAGradientLayer()
+        
+        player2GradientLayer.position = player2BackgroundView.layer.position
+        player2GradientLayer.frame = player2BackgroundView.bounds
+        player2GradientLayer.colors = viewModel.getGradientColors(isPlayer1: false)
+        player2BackgroundView.layer.insertSublayer(player2GradientLayer, at: 0)
     }
     
     private func setPlayerNames() {

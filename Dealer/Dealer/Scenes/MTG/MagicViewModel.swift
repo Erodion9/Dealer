@@ -6,6 +6,8 @@
 //  Copyright © 2020 Deniz Mavi. All rights reserved.
 //
 
+import UIKit
+
 final class MagicViewModel: MatchViewModel {
     
     enum Change {
@@ -35,5 +37,16 @@ final class MagicViewModel: MatchViewModel {
     
     func getMatchData() -> MatchData {
         return matchData
+    }
+    
+    func getGradientColors(isPlayer1: Bool) -> [CGColor] {
+        if isPlayer1 {
+            return [matchData.colors.player1.primary.getColor(),
+                    matchData.colors.player1.secondary.getColor()]
+        } else {
+            return [matchData.colors.player2.primary.getColor(),
+                    matchData.colors.player2.secondary.getColor()]
+        }
+
     }
 }

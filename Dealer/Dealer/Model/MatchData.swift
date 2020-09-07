@@ -6,6 +6,8 @@
 //  Copyright © 2020 Deniz Mavi. All rights reserved.
 //
 
+import UIKit
+
 struct MatchData {
     
     enum MatchType {
@@ -33,6 +35,21 @@ struct MatchData {
                 return "🟩"
             case .black:
                 return "⬛️"
+            }
+        }
+        
+        func getColor() -> CGColor {
+            switch self {
+            case .blue:
+                return UIColor.blue.cgColor
+            case .red:
+                return UIColor.red.cgColor
+            case .white:
+                return UIColor.white.cgColor
+            case .green:
+                return UIColor.green.cgColor
+            case .black:
+                return UIColor.black.cgColor
             }
         }
     }

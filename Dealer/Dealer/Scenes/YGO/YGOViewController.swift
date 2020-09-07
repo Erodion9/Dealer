@@ -32,9 +32,6 @@ final class YGOViewController: MatchViewController, UINavigationControllerDelega
         configureView()
         reloadLifeData()
     }
-    @IBAction func lifeTextFieldTapped(_ sender: UITextField) {
-        sender.selectedTextRange = sender.textRange(from: sender.beginningOfDocument, to: sender.endOfDocument)
-    }
 }
 
 //MARK: - View Configuration
@@ -42,7 +39,6 @@ extension YGOViewController {
     
     private func configureView() {
         //Todo: Move state change handling to BaseViewController and Model
-        viewModel = YGOViewModel()
         viewModel.stateChangeHandler = { [weak self] change in
         self?.apply(change: change)
         }
@@ -89,7 +85,6 @@ private extension YGOViewController {
         viewModel.decrementLife(isPlayer1: sender.tag == 0)
     }
     
-    
     @IBAction func pictureButtonTapped(_ sender: UIButton) {
         ImagePickerManager().pickImage(self) { (image) in
             let resizedImage = self.resizeImage(image: image, targetSize: sender.frame.size)
@@ -103,6 +98,10 @@ private extension YGOViewController {
     
     @IBAction func coinButtonTapped(_ sender: Any) {
         show(storyboard: .coin, style: .formSheet, passedParameters: nil)
+    }
+    
+    @IBAction func lifeTextFieldTapped(_ sender: UITextField) {
+        sender.selectedTextRange = sender.textRange(from: sender.beginningOfDocument, to: sender.endOfDocument)
     }
 }
 
