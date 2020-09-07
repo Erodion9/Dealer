@@ -151,7 +151,7 @@ extension MagicSetupViewController: UIPickerViewDelegate, UIPickerViewDataSource
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == player1ColorPickerView || pickerView == player2ColorPickerView {
-            return String(describing: colorPickerData[component][row])
+            return colorPickerData[component][row].getEmoji()
         }
         else {
             return String(row)
