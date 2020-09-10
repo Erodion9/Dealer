@@ -1,2 +1,2 @@
 # Dealer
-An assistant for various TCG Games.
+Tabletop assistant for Magic The Gathering, Yu-Gi-Oh! and possibly more(in the future)! A passion project of mine that I've decided to make open source.
